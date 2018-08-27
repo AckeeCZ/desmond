@@ -1,0 +1,24 @@
+{
+  "name": "tools",
+  "description": "tools",
+  "version": "0.0.0",
+  "author": "Pan Unicorn <pan.unicorn@ackee.cz>",
+  "engines": {
+    "node": "^8.3.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && NODE_PATH=dist jest",
+    "test:coverage": "npm run test -- --collectCoverage",
+    "lint": "tslint -t codeFrame -p .",
+    "check": "npm-check -i app -i errors -i config -i index & exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "jest": "^23.6.0",
+    "npm-check": "^5.8.0",
+    "tslint-config-ackee": "^0.1.1",
+    "typescript": "^3.1.2"
+  }
+}
