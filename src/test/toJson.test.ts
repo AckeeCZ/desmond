@@ -36,4 +36,11 @@ describe('toJson', () => {
         const nullEntity = null;
         expect(toJson(nullEntity)).toBe(null);
     });
+
+    test('Handles non-function toJSON', () => {
+        const mischievousEntity = {
+            toJSON: 'Not a function!',
+        };
+        expect(toJson(mischievousEntity)).toBe(mischievousEntity);
+    });
 });

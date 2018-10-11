@@ -5,7 +5,9 @@ interface Model {
 type Entity = Model | null | object;
 
 const isModel = (obj: Entity): obj is Model => {
-    return obj !== null && 'toJSON' in obj;
+    return obj !== null
+        && 'toJSON' in obj
+        && typeof obj.toJSON === 'function';
 };
 
 /**
