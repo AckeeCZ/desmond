@@ -43,4 +43,24 @@ describe('toJson', () => {
         };
         expect(toJson(mischievousEntity)).toBe(mischievousEntity);
     });
+
+    test('Argument pureness', () => {
+        const complexJsonRes = {
+            yo: 'yo',
+        };
+        const options = {
+            nay: 'yay',
+        };
+        const complexEntity = {
+            bar: 2,
+            baz: 'baz',
+            foo: 1,
+            toJSON: () => complexJsonRes,
+        };
+        const optionsParam = {...options};
+        const complexEntityParam = {...complexEntity};
+        expect(toJson(complexEntityParam, optionsParam)).toBe(complexJsonRes);
+        expect(optionsParam).toEqual(options);
+        expect(complexEntityParam).toEqual(complexEntity);
+    });
 });
