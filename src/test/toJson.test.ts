@@ -16,6 +16,10 @@ describe('toJson', () => {
         toJsonCounter = 0;
     });
 
+    test('Returns simple object', () => {
+        expect(toJson(jsonRes)).toBe(jsonRes);
+    });
+
     test('Converted to JSON', () => {
         expect(toJson(entity)).toBe(jsonRes);
         expect(toJsonCounter).toBe(1);
