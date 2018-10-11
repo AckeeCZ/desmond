@@ -39,7 +39,7 @@ describe('toJson', () => {
 
     test('Handles non-function toJSON', () => {
         const mischievousEntity = {
-            toJSON: 'Not a function!',
+            toJSON: 'Not a function!' as any as () => any,
         };
         expect(toJson(mischievousEntity)).toBe(mischievousEntity);
     });
