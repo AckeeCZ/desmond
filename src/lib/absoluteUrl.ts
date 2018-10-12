@@ -14,6 +14,6 @@ const valid = (req: Request) => req && req.protocol && req.originalUrl && typeof
  * @param req express request
  * @return absolute url
  */
-const absoluteUrl = (req: Request) => valid(req) && `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+const absoluteUrl = (req: Request) => valid(req) ? `${req.protocol}://${req.get('host')}${req.originalUrl}` : null;
 
 export default absoluteUrl;
