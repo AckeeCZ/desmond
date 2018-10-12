@@ -4,6 +4,9 @@ export interface Request {
     get: (param: string) => string;
 }
 
+/**
+ * @ignore
+ */
 const valid = (req: Request) => req && req.protocol && req.originalUrl && typeof req.get === 'function';
 
 /**
