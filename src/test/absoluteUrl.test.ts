@@ -30,4 +30,8 @@ describe('absoluteUrl', () => {
     test('Returns null on null', () => {
         expect(absoluteUrl(null as any as Request)).toBe(null);
     });
+    test('Returns null on invalid request', () => {
+        const mischievousRequest = { protocol: 'foo', get: () => 'x' };
+        expect(absoluteUrl(mischievousRequest as any as Request)).toBe(null);
+    });
 });
