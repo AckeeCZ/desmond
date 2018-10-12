@@ -1,3 +1,6 @@
+import { isFunction } from './internal/validators';
+
+
 export interface Request {
     protocol: string;
     originalUrl: string;
@@ -7,7 +10,7 @@ export interface Request {
 /**
  * @ignore
  */
-const valid = (req: Request) => req && req.protocol && req.originalUrl && typeof req.get === 'function';
+const valid = (req: Request) => req && req.protocol && req.originalUrl && isFunction(req.get);
 
 /**
  * Creates absolute URL from express Request object

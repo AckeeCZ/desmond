@@ -1,3 +1,5 @@
+import { isFunction } from './internal/validators';
+
 interface Model {
     [key: string]: any;
     toJSON?: (options?: any) => any;
@@ -11,7 +13,7 @@ interface Model {
  * @returns toJSON result
  */
 const toJson = (model: Nullable<Model>, options: object = {}) => {
-    if (model && model.toJSON && typeof model.toJSON === 'function') {
+    if (model && model.toJSON && isFunction(model.toJSON)) {
         return model.toJSON(options);
     }
     return model;
