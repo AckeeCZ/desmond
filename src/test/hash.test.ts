@@ -1,8 +1,23 @@
+import { HexBase64Latin1Encoding } from 'crypto';
 import hash from 'lib/hash';
 
 describe('hash', () => {
-    test('Returns a string', () => {
-        expect(typeof hash('foo')).toBe('string');
+    describe('Basic behavior', () => {
+        const data = 'foo';
+        test('Returns a string', () => {
+            expect(typeof hash(data)).toBe('string');
+        });
+        test('Throws error on non-existent hash', () => {
+            const algo = 'ThisHashAlgoHopefullyDoesNotExist';
+            expect(() => hash(data, algo)).toThrow();
+        });
+        test('Returns buffer on null encoding', () => {
+            expect(hash(data, 'sha1', null as any as HexBase64Latin1Encoding)).toBeInstanceOf(Buffer);
+        });
+        test('Returns buffer on invalid encoding', () => {
+            const encoding = 'NorThisDigestEncoding' as any as HexBase64Latin1Encoding;
+            expect(hash(data, 'sha1', encoding)).toBeInstanceOf(Buffer);
+        });
     });
     describe('Algorithm (snapshot testing)', () => {
         const data = 'She sells sea shells on a sea shore.';
