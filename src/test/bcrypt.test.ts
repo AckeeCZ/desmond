@@ -9,7 +9,7 @@ describe('bcrypt', () => {
     test('Successful compare', async () => {
         const data = 'Two tiny timid toads trying to trot to Tarrytown.';
         const hashed = await hash(data);
-        expect(compare(hashed, data)).toBeTruthy;
-        expect(compare(hashed, 'foo')).toBeFalsy;
+        await expect(compare(data, hashed)).resolves.toBe(true);
+        await expect(compare(hashed, 'foo')).resolves.toBe(false);
     });
 });
