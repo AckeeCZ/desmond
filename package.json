@@ -14,7 +14,9 @@
     "docs": "typedoc --includeDeclarations --excludeExternals --mode file --theme markdown --out docs src/lib src/*.d.ts",
     "check": "npm-check -i app -i errors -i config -i index & exit 0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash.snakecase": "^4.1.1"
+  },
   "devDependencies": {
     "@types/jest": "^23.3.5",
     "jest": "^23.6.0",
