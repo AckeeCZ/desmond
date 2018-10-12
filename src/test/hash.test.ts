@@ -7,6 +7,9 @@ describe('hash', () => {
         test('Returns a string', () => {
             expect(typeof hash(data)).toBe('string');
         });
+        test('Returns null on null', () => {
+            expect(hash(null as any as string)).toBe(null);
+        });
         test('Throws error on non-existent hash', () => {
             const algo = 'ThisHashAlgoHopefullyDoesNotExist';
             expect(() => hash(data, algo)).toThrow();
@@ -40,5 +43,5 @@ describe('hash', () => {
         test('Digest latin1', () => {
             expect(hash(data, algo, 'latin1')).toBe('¦;l¹¦úxFu©Ûw}m');
         });
-    })
+    });
 });
