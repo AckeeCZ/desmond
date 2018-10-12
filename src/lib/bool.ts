@@ -1,5 +1,6 @@
-const bool = (value: any) => {
-    return (value === true || value === 'true' || value === '1' || value === 1);
-};
+
+const isNan = (value: any) => isNaN(value) && typeof value !== 'string';
+
+const bool = (value: any) => !(isNan(value) || String(value) === 'false' || String(value) === '0');
 
 export default bool;
