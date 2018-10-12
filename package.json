@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && NODE_PATH=dist jest",
+    "test": "npm run build && NODE_PATH=src jest",
     "test:coverage": "npm run test -- --collectCoverage",
     "lint": "tslint -t codeFrame -p .",
     "docs": "typedoc --includeDeclarations --excludeExternals --mode file --theme markdown --out docs src/lib src/*.d.ts",
@@ -21,6 +21,7 @@
     "@types/jest": "^23.3.5",
     "jest": "^23.6.0",
     "npm-check": "^5.8.0",
+    "ts-jest": "^23.10.4",
     "tslint-config-ackee": "^0.1.1",
     "typedoc": "^0.13.0",
     "typedoc-plugin-markdown": "^1.1.17",
