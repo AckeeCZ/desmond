@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - `hash` function
  - `parseBool` function
  - `snakelizeKeys` function
+ - `hash`, `compare` bcrypt functions
 
 ### Changed
  - use `ts-jest` instead of `jest`
