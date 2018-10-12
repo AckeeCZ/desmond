@@ -27,4 +27,7 @@ describe('absoluteUrl', () => {
             pathname: originalUrl,
         }));
     });
+    test('Returns null on null', () => {
+        expect(absoluteUrl(null as any as Request)).toBe(null);
+    });
 });
