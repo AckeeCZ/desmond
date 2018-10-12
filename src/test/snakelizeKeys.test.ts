@@ -1,6 +1,6 @@
-import snakelize from 'lib/snakelize';
+import snakelize from 'lib/snakelizeKeys';
 
-describe('snakelize', () => {
+describe('snakelizeKeys', () => {
     test('Snakelize object keys', () => {
         const input = { fooBar: 1, camelCaseFtw: 'PleaseKeepThisUntouched' };
         expect(snakelize(input)).toEqual({ foo_bar: input.fooBar, camel_case_ftw: input.camelCaseFtw });
