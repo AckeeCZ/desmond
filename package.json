@@ -1,6 +1,6 @@
 {
-  "name": "tools",
-  "description": "tools",
+  "name": "backend-toolbag",
+  "description": "Set of tools, functions and helpers for node back-end development.",
   "version": "0.0.0",
   "author": "Pan Unicorn <pan.unicorn@ackee.cz>",
   "engines": {
