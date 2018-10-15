@@ -1,4 +1,4 @@
-import sqlColumnsListPromise from 'lib/sqlColumnsListPromise';
+import tableColumns from 'lib/tableColumns';
 import createKnexMock from './mock/knex';
 
 const knex = createKnexMock({}, name => ({
@@ -9,9 +9,9 @@ const knex = createKnexMock({}, name => ({
     }),
 }));
 
-describe('transacted', () => {
+describe('tableColumns', () => {
     test('Camelcases all columns', async () => {
-        await expect(sqlColumnsListPromise(knex, 'some_name')).resolves.toEqual([
+        await expect(tableColumns(knex, 'some_name')).resolves.toEqual([
             'someName',
             'fooBar',
             'barBaz',
