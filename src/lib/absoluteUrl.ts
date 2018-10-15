@@ -1,3 +1,4 @@
+import { deprecate } from './internal/deprecate';
 import { isFunction } from './internal/validators';
 
 
@@ -19,4 +20,4 @@ const valid = (req: Request) => req && req.protocol && req.originalUrl && isFunc
  */
 const absoluteUrl = (req: Request) => valid(req) ? `${req.protocol}://${req.get('host')}${req.originalUrl}` : null;
 
-export default absoluteUrl;
+export default deprecate(absoluteUrl);
