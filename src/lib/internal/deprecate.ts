@@ -3,6 +3,7 @@ const aliases: { [k: string]: string } = {
     nullOrToJSON: 'toJson',
     snakelize: 'snakelizeKeys',
     toBoolean: 'parseBool',
+    sqlColumnsListPromise: 'tableColumns',
 };
 
 const report = (fn: (p: any) => any) => {
