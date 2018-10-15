@@ -1,5 +1,8 @@
 import { randomBytes } from 'crypto';
 
+/**
+ * Generate a random afanumeric string of given lenght
+ */
 const generateRandomAlphanumeric = (num: number) => {
     return randomBytes(Math.ceil(num * (3 / 4)))
         .toString('base64')
