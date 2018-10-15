@@ -1,9 +1,3 @@
-type Transaction = any;
-type TransactionFunction = (t: Transaction) => any;
-
-interface Knex {
-    transaction: (fn: TransactionFunction) => any;
-}
 interface KnexParams {
     transacting?: Transaction;
 }
