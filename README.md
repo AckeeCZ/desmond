@@ -11,23 +11,23 @@ TODO
 ## Contents
 
 ### Express
- - [`absoluteUrl`](./docs/README.md#const-absoluteurl)
+ - [`absoluteUrl`](./docs/README.md#absoluteurl)
 
 ### Hashing
- - [`compareBcrypt`](./docs/README.md#const-comparebcrypt)
- - [`hashBcrypt`](./docs/README.md#const-hashbcrypt)
- - [`hash`](./docs/README.md#const-hash)
+ - [`compareBcrypt`](./docs/README.md#comparebcrypt)
+ - [`hashBcrypt`](./docs/README.md#hashbcrypt)
+ - [`hash`](./docs/README.md#hash)
 
 ### Database
- - [`snakelizeKeys`](./docs/README.md#const-snakelizekeys)
- - [`toJson`](./docs/README.md#const-tojson)
- - [`tableColumns`](./docs/README.md#const-tablecolumns)
- - [`transacted`](./docs/README.md#const-transacted)
+ - [`snakelizeKeys`](./docs/README.md#snakelizekeys)
+ - [`toJson`](./docs/README.md#tojson)
+ - [`tableColumns`](./docs/README.md#tablecolumns)
+ - [`transacted`](./docs/README.md#transacted)
 
 ### Other
- - [`createDateWithMinutesFromNow`](./docs/README.md#const-createdatewithminutesfromnow)
- - [`parseBool`](./docs/README.md#const-parsebool)
- - [`randomAfanumeric`](./docs/README.md#const-randomafanumeric)
+ - [`createDateWithMinutesFromNow`](./docs/README.md#createdatewithminutesfromnow)
+ - [`parseBool`](./docs/README.md#parsebool)
+ - [`randomAfanumeric`](./docs/README.md#randomafanumeric)
 
 ## Development
 
