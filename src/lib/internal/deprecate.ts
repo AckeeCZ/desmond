@@ -2,8 +2,8 @@ const aliases: { [k: string]: string } = {
     absoluteUrl: 'absoluteUrl',
     nullOrToJSON: 'toJson',
     snakelize: 'snakelizeKeys',
-    toBoolean: 'parseBool',
     sqlColumnsListPromise: 'tableColumns',
+    toBoolean: 'parseBool',
 };
 
 const report = (fn: (p: any) => any) => {
