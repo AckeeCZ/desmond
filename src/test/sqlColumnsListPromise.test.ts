@@ -4,8 +4,8 @@ import createKnexMock from './mock/knex';
 const knex = createKnexMock({}, name => ({
     columnInfo: () => Promise.resolve({
         [name]: true,
-        foo_bar: true,
         bar_baz: true,
+        foo_bar: true,
     }),
 }));
 
