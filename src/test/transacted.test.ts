@@ -10,6 +10,7 @@ const knex = {
         fn(transaction);
     },
 };
+const saveT = (t: any) => (lastT = t);
 
 describe('transacted', () => {
     beforeEach(() => {
@@ -20,10 +21,10 @@ describe('transacted', () => {
         expect(isFunction(transacted(knex, {}))).toBe(true);
     });
     test('Repeated transaction created', () => {
-        transacted(knex, {})(t => (lastT = t));
+        transacted(knex, {})(saveT);
         expect(lastT).toBe(transaction);
 
-        transacted(knex, {})(t => (lastT = t));
+        transacted(knex, {})(saveT);
         expect(lastT).toBe(transaction);
 
         // 2 new transactions
@@ -33,10 +34,10 @@ describe('transacted', () => {
         const options = {
             transacting: 'T1',
         };
-        transacted(knex, options)(t => (lastT = t));
+        transacted(knex, options)(saveT);
         expect(lastT).toBe(options.transacting);
 
-        transacted(knex, options)(t => (lastT = t));
+        transacted(knex, options)(saveT);
         expect(lastT).toBe(options.transacting);
 
         // no new transactions created
