@@ -1,10 +1,5 @@
 import { isFunction } from './internal/validators';
 
-interface Model {
-    [key: string]: any;
-    toJSON?: (options?: any) => any;
-}
-
 /**
  * Transforms (usually database) object to pure JSON object using toJSON member function.
  * If it does not have toJSON or object does not exist, it returns object itself.

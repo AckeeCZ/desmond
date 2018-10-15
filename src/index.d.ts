@@ -1,5 +1,10 @@
 type Nullable<T> = T | null;
 
+interface Model {
+    [key: string]: any;
+    toJSON?: (options?: any) => any;
+}
+
 type Transaction = any;
 type TransactionFunction = (t: Transaction) => any;
 
