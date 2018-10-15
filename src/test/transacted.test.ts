@@ -1,15 +1,16 @@
 import { isFunction } from 'lib/internal/validators';
 import transacted from 'lib/transacted';
+import createKnexMock from './mock/knex';
 
 let transactionsRan = 0;
 const transaction = 'T0';
 let lastT: string | undefined;
-const knex = {
-    transaction: (fn: (t: any) => any) => {
+const knex = createKnexMock({
+    transaction: (fn: TransactionFunction) => {
         transactionsRan++;
         fn(transaction);
     },
-};
+});
 const saveT = (t: any) => (lastT = t);
 
 describe('transacted', () => {
