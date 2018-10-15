@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - `parseBool` function
  - `snakelizeKeys` function
  - `hash`, `compare` bcrypt functions
+ - `randomAfanumeric` function
 
 ### Changed
  - use `ts-jest` instead of `jest`
