@@ -11,10 +11,13 @@ const knex = createKnexMock({}, name => ({
 
 describe('tableColumns', () => {
     test('Camelcases all columns', async () => {
-        await expect(tableColumns(knex, 'some_name')).resolves.toEqual([
+        const got = tableColumns(knex, 'some_name')
+            .then(cols => cols.sort());
+        const expected = [
             'someName',
             'fooBar',
             'barBaz',
-        ]);
+        ].sort();
+        await expect(got).resolves.toEqual(expected);
     });
 });
