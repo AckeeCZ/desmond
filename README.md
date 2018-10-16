@@ -34,7 +34,7 @@ TODO
  - [`createDateWithMinutesFromNow`](./docs/README.md#const-createdatewithminutesfromnow)
  - [`parseBool`](./docs/README.md#const-parsebool)
  - ~~`toBoolean`~~ deprecated alias for `parseBool`
- - [`generateRandomAfanumeric`](./docs/README.md#const-generaterandomafanumeric)
+ - [`generateRandomAlphanumeric`](./docs/README.md#const-generaterandomalphanumeric)
 
 ## Development
 
