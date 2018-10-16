@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - `randomAfanumeric` function
  - `transacted` function
  - `tableColumns` function
+ - main file
 
 ### Changed
  - use `ts-jest` instead of `jest`
