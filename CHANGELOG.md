@@ -13,9 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - `parseBool` function
  - `snakelizeKeys` function
  - `hashBcrypt`, `compareBcrypt` functions
- - `randomAfanumeric` function
+ - `generateRandomAlphanumeric` function
  - `transacted` function
  - `tableColumns` function
+ - function aliases
+ - `deprecated` wrapper
 
 ### Changed
  - use `ts-jest` instead of `jest`
