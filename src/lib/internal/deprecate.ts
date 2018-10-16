@@ -1,5 +1,6 @@
 const aliases: { [k: string]: string } = {
     _test: '_test',
+    createHash: 'hash',
     fullUrlFromReq: 'absoluteUrl',
     nullOrToJSON: 'toJson',
     snakelize: 'snakelizeKeys',

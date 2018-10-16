@@ -1,11 +1,5 @@
-import { createHash as createHashCrypto, HexBase64Latin1Encoding } from 'crypto';
+import hash from './hash';
+import { deprecate } from './internal/deprecate';
 
-/**
- * Create a has from input string
- * @param encoding digest encoding
- * @returns hash (default) or null (if no data provided)
- */
-const createHash = (data: string, algorithm: string = 'sha512', encoding: HexBase64Latin1Encoding = 'hex') =>
-    data ? createHashCrypto(algorithm).update(data).digest(encoding) : null;
 
-export default createHash;
+export default deprecate(Object.assign(hash, {depricatedName: 'createHash'}));

@@ -22,8 +22,8 @@
 * [absoluteUrl](#absoluteurl)
 * [compareBcrypt](#comparebcrypt)
 * [createDateWithMinutesFromNow](#createdatewithminutesfromnow)
-* [createHash](#createhash)
 * [generateRandomAlphanumeric](#generaterandomalphanumeric)
+* [hash](#hash)
 * [hashBcrypt](#hashbcrypt)
 * [parseBool](#parsebool)
 * [snakelizeKeys](#snakelizekeys)
@@ -135,29 +135,6 @@ Create a date in given minutes future
 **Returns:** `Date`
 
 ___
-<a id="createhash"></a>
-
-### `<Const>` createHash
-
-▸ **createHash**(data: *`string`*, algorithm?: *`string`*, encoding?: *`HexBase64Latin1Encoding`*):  `null` &#124; `string`
-
-*Defined in lib/createHash.ts:8*
-
-Create a has from input string
-
-**Parameters:**
-
-| Param | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| data | `string` | - |
-| `Default value` algorithm | `string` | &quot;sha512&quot; |
-| `Default value` encoding | `HexBase64Latin1Encoding` | &quot;hex&quot; |  digest encoding |
-
-**Returns:**  `null` &#124; `string`
-
-hash (default) or null (if no data provided)
-
-___
 <a id="generaterandomalphanumeric"></a>
 
 ### `<Const>` generateRandomAlphanumeric
@@ -175,6 +152,29 @@ Generate a random afanumeric string of given lenght
 | num | `number` |
 
 **Returns:** `string`
+
+___
+<a id="hash"></a>
+
+### `<Const>` hash
+
+▸ **hash**(data: *`string`*, algorithm?: *`string`*, encoding?: *`HexBase64Latin1Encoding`*):  `null` &#124; `string`
+
+*Defined in lib/hash.ts:8*
+
+Create a has from input string
+
+**Parameters:**
+
+| Param | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| data | `string` | - |
+| `Default value` algorithm | `string` | &quot;sha512&quot; |
+| `Default value` encoding | `HexBase64Latin1Encoding` | &quot;hex&quot; |  digest encoding |
+
+**Returns:**  `null` &#124; `string`
+
+hash (default) or null (if no data provided)
 
 ___
 <a id="hashbcrypt"></a>

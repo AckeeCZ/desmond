@@ -1,3 +1,4 @@
+import createHash from 'lib/createHash';
 import encodeBcrypt from 'lib/encodeBcrypt';
 import fullUrlFromReq from 'lib/fullUrlFromReq';
 import { deprecate } from 'lib/internal/deprecate';
@@ -8,6 +9,7 @@ import toBoolean from 'lib/toBoolean';
 
 const aliases = [
     encodeBcrypt,
+    createHash,
     fullUrlFromReq,
     nullOrToJSON,
     snakelize,
