@@ -26,7 +26,7 @@
 **● toJSON**: * `undefined` &#124; `function`
 *
 
-*Defined in lib/toJson.ts:5*
+*Defined in index.d.ts:5*
 
 ___
 

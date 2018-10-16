@@ -22,8 +22,8 @@
 * [absoluteUrl](#absoluteurl)
 * [compareBcrpyt](#comparebcrpyt)
 * [createDateWithMinutesFromNow](#createdatewithminutesfromnow)
+* [createHash](#createhash)
 * [generateRandomAlphanumeric](#generaterandomalphanumeric)
-* [hash](#hash)
 * [hashBcrypt](#hashbcrypt)
 * [parseBool](#parsebool)
 * [snakelizeKeys](#snakelizekeys)
@@ -51,7 +51,7 @@ ___
 
 **Ƭ Transaction**: *`any`*
 
-*Defined in index.d.ts:3*
+*Defined in index.d.ts:8*
 
 ___
 <a id="transactionfunction"></a>
@@ -60,7 +60,7 @@ ___
 
 **Ƭ TransactionFunction**: *`function`*
 
-*Defined in index.d.ts:4*
+*Defined in index.d.ts:9*
 
 #### Type declaration
 ▸(t: *[Transaction](#transaction)*): `any`
@@ -135,32 +135,13 @@ Create a date in given minutes future
 **Returns:** `Date`
 
 ___
-<a id="generaterandomalphanumeric"></a>
+<a id="createhash"></a>
 
-### `<Const>` generateRandomAlphanumeric
+### `<Const>` createHash
 
-▸ **generateRandomAlphanumeric**(num: *`number`*): `string`
+▸ **createHash**(data: *`string`*, algorithm?: *`string`*, encoding?: *`HexBase64Latin1Encoding`*):  `null` &#124; `string`
 
-*Defined in lib/randomAfanumeric.ts:6*
-
-Generate a random afanumeric string of given lenght
-
-**Parameters:**
-
-| Param | Type |
-| ------ | ------ |
-| num | `number` |
-
-**Returns:** `string`
-
-___
-<a id="hash"></a>
-
-### `<Const>` hash
-
-▸ **hash**(data: *`string`*, algorithm?: *`string`*, encoding?: *`HexBase64Latin1Encoding`*):  `null` &#124; `string`
-
-*Defined in lib/hash.ts:8*
+*Defined in lib/createHash.ts:8*
 
 Create a has from input string
 
@@ -175,6 +156,25 @@ Create a has from input string
 **Returns:**  `null` &#124; `string`
 
 hash (default) or null (if no data provided)
+
+___
+<a id="generaterandomalphanumeric"></a>
+
+### `<Const>` generateRandomAlphanumeric
+
+▸ **generateRandomAlphanumeric**(num: *`number`*): `string`
+
+*Defined in lib/generateRandomAlphanumeric.ts:6*
+
+Generate a random afanumeric string of given lenght
+
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| num | `number` |
+
+**Returns:** `string`
 
 ___
 <a id="hashbcrypt"></a>
@@ -259,7 +259,7 @@ ___
 
 ▸ **toJson**(model: *[Nullable](#nullable)<[Model](interfaces/model.md)>*, options?: *`object`*): `any`
 
-*Defined in lib/toJson.ts:15*
+*Defined in lib/toJson.ts:10*
 
 Transforms (usually database) object to pure JSON object using toJSON member function. If it does not have toJSON or object does not exist, it returns object itself.
 
