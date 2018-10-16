@@ -33,6 +33,7 @@ TODO
 ### Promises
  - [`promiseChain`](./docs/README.md#const-promisechain)
  - [`promisify`](./docs/README.md#promisify)
+ - [`tap`](./docs/README.md#const-tap)
 
 ### Other
  - [`createDateWithMinutesFromNow`](./docs/README.md#const-createdatewithminutesfromnow)

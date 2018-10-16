@@ -31,6 +31,7 @@
 * [promisify](#promisify)
 * [snakelizeKeys](#snakelizekeys)
 * [tableColumns](#tablecolumns)
+* [tap](#tap)
 * [toJson](#tojson)
 * [transacted](#transacted)
 
@@ -398,6 +399,28 @@ Return list of camelCased column names
 | table | `string` |  Table name |
 
 **Returns:** `Promise`<`Object`[]>
+
+___
+<a id="tap"></a>
+
+### `<Const>` tap
+
+▸ **tap**<`T`>(handler: *`function`*): `(Anonymous function)`
+
+*Defined in lib/tap.ts:5*
+
+Promise side effect. Inspired by common bluebird's Promise#tap
+
+**Type parameters:**
+
+#### T 
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| handler | `function` |
+
+**Returns:** `(Anonymous function)`
 
 ___
 <a id="tojson"></a>
