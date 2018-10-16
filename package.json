@@ -3,6 +3,7 @@
   "description": "Set of tools, functions and helpers for node back-end development.",
   "version": "0.0.0",
   "author": "Pan Unicorn <pan.unicorn@ackee.cz>",
+  "main": "./dist/main.js",
   "engines": {
     "node": "^8.3.0"
   },
