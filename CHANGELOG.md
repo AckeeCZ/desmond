@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - function aliases
  - `deprecated` wrapper
  - main file
+ - `promiseChain` function
 
 ### Changed
  - use `ts-jest` instead of `jest`
