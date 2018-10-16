@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - `deprecated` wrapper
  - main file
  - `promiseChain` function
+ - `promisify` function
 
 ### Changed
  - use `ts-jest` instead of `jest`
