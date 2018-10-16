@@ -20,7 +20,7 @@
 ### Functions
 
 * [absoluteUrl](#absoluteurl)
-* [compareBcrpyt](#comparebcrpyt)
+* [compareBcrypt](#comparebcrypt)
 * [createDateWithMinutesFromNow](#createdatewithminutesfromnow)
 * [createHash](#createhash)
 * [generateRandomAlphanumeric](#generaterandomalphanumeric)
@@ -98,11 +98,11 @@ Creates absolute URL from express Request object
 absolute url
 
 ___
-<a id="comparebcrpyt"></a>
+<a id="comparebcrypt"></a>
 
-### `<Const>` compareBcrpyt
+### `<Const>` compareBcrypt
 
-▸ **compareBcrpyt**(plain: *`string`*, hashed: *`string`*): `Promise`<`boolean`>
+▸ **compareBcrypt**(plain: *`string`*, hashed: *`string`*): `Promise`<`boolean`>
 
 *Defined in lib/compareBcrypt.ts:3*
 
