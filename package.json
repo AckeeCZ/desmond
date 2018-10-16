@@ -16,12 +16,12 @@
     "check": "npm-check -i app -i errors -i config -i index & exit 0"
   },
   "dependencies": {
-    "@types/bcrypt": "^3.0.0",
     "bcrypt": "^3.0.1",
     "lodash.camelcase": "^4.3.0",
     "lodash.snakecase": "^4.1.1"
   },
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/jest": "^23.3.5",
     "jest": "^23.6.0",
     "npm-check": "^5.8.0",
