@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
  - main file
  - `promiseChain` function
  - `promisify` function
+ - `tap` function
 
 ### Changed
  - use `ts-jest` instead of `jest`
