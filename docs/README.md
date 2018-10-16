@@ -13,6 +13,7 @@
 
 ### Type aliases
 
+* [Callback](#callback)
 * [Nullable](#nullable)
 * [Transaction](#transaction)
 * [TransactionFunction](#transactionfunction)
@@ -27,6 +28,7 @@
 * [hashBcrypt](#hashbcrypt)
 * [parseBool](#parsebool)
 * [promiseChain](#promisechain)
+* [promisify](#promisify)
 * [snakelizeKeys](#snakelizekeys)
 * [tableColumns](#tablecolumns)
 * [toJson](#tojson)
@@ -36,6 +38,27 @@
 
 ## Type aliases
 
+<a id="callback"></a>
+
+###  Callback
+
+**Ƭ Callback**: *`function`*
+
+*Defined in lib/promisify.ts:1*
+
+#### Type declaration
+▸(e: *`any`*, res?: *[T]()*): `void`
+
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| e | `any` |
+| `Optional` res | [T]() |
+
+**Returns:** `void`
+
+___
 <a id="nullable"></a>
 
 ###  Nullable
@@ -236,6 +259,106 @@ Run tasks sequentially, resolving the resulting promises and accumulating the re
 
 **Returns:** `Promise`<`T`[]>
 array of resolved values
+
+___
+<a id="promisify"></a>
+
+###  promisify
+
+▸ **promisify**<`TRes`>(fn: *`function`*): `function`
+
+▸ **promisify**<`T1`,`TRes`>(fn: *`function`*): `function`
+
+▸ **promisify**<`T1`,`T2`,`TRes`>(fn: *`function`*): `function`
+
+▸ **promisify**<`T1`,`T2`,`T3`,`TRes`>(fn: *`function`*): `function`
+
+▸ **promisify**<`T1`,`T2`,`T3`,`T4`,`TRes`>(fn: *`function`*): `function`
+
+*Defined in lib/promisify.ts:3*
+
+Promisify a callback function
+
+**Type parameters:**
+
+#### TRes 
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| fn | `function` |
+
+**Returns:** `function`
+
+*Defined in lib/promisify.ts:4*
+
+Promisify a callback function
+
+**Type parameters:**
+
+#### T1 
+#### TRes 
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| fn | `function` |
+
+**Returns:** `function`
+
+*Defined in lib/promisify.ts:5*
+
+Promisify a callback function
+
+**Type parameters:**
+
+#### T1 
+#### T2 
+#### TRes 
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| fn | `function` |
+
+**Returns:** `function`
+
+*Defined in lib/promisify.ts:6*
+
+Promisify a callback function
+
+**Type parameters:**
+
+#### T1 
+#### T2 
+#### T3 
+#### TRes 
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| fn | `function` |
+
+**Returns:** `function`
+
+*Defined in lib/promisify.ts:7*
+
+Promisify a callback function
+
+**Type parameters:**
+
+#### T1 
+#### T2 
+#### T3 
+#### T4 
+#### TRes 
+**Parameters:**
+
+| Param | Type |
+| ------ | ------ |
+| fn | `function` |
+
+**Returns:** `function`
 
 ___
 <a id="snakelizekeys"></a>
