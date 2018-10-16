@@ -26,6 +26,7 @@
 * [hash](#hash)
 * [hashBcrypt](#hashbcrypt)
 * [parseBool](#parsebool)
+* [promiseChain](#promisechain)
 * [snakelizeKeys](#snakelizekeys)
 * [tableColumns](#tablecolumns)
 * [toJson](#tojson)
@@ -212,6 +213,29 @@ Parse bool from string (`"0"`, `"false"` --> `false`, else `true`), number (`0` 
 | value | `any` |
 
 **Returns:** `boolean`
+
+___
+<a id="promisechain"></a>
+
+### `<Const>` promiseChain
+
+▸ **promiseChain**<`T`>(tasks: *`Array`<`function`>*): `Promise`<`T`[]>
+
+*Defined in lib/promiseChain.ts:6*
+
+Run tasks sequentially, resolving the resulting promises and accumulating the result in an array
+
+**Type parameters:**
+
+#### T 
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| tasks | `Array`<`function`> |  Tasks to be executed |
+
+**Returns:** `Promise`<`T`[]>
+array of resolved values
 
 ___
 <a id="snakelizekeys"></a>

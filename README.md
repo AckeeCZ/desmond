@@ -35,6 +35,7 @@ TODO
  - [`parseBool`](./docs/README.md#const-parsebool)
  - ~~`toBoolean`~~ deprecated alias for `parseBool`
  - [`generateRandomAlphanumeric`](./docs/README.md#const-generaterandomalphanumeric)
+ - [`promiseChain`](./docs/README.md#const-promisechain)
 
 ## Development
 
