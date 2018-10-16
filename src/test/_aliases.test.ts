@@ -1,3 +1,4 @@
+import encodeBcrypt from 'lib/encodeBcrypt';
 import fullUrlFromReq from 'lib/fullUrlFromReq';
 import { deprecate } from 'lib/internal/deprecate';
 import nullOrToJSON from 'lib/nullOrToJSON';
@@ -6,6 +7,7 @@ import sqlColumnsListPromise from 'lib/sqlColumnsListPromise';
 import toBoolean from 'lib/toBoolean';
 
 const aliases = [
+    encodeBcrypt,
     fullUrlFromReq,
     nullOrToJSON,
     snakelize,
