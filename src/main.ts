@@ -15,6 +15,7 @@ export { default as snakelizeKeys } from './lib/snakelizeKeys';
 export { default as snakelize } from './lib/snakelize';
 export { default as sqlColumnsListPromise } from './lib/sqlColumnsListPromise';
 export { default as tableColumns } from './lib/tableColumns';
+export { default as tap } from './lib/tap';
 export { default as toBoolean } from './lib/toBoolean';
 export { default as toJson } from './lib/toJson';
 export { default as transacted } from './lib/transacted';
