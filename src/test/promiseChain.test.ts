@@ -6,7 +6,7 @@ describe('promiseChain', () => {
 
         const thenAdd = (x: number, wait: number) => {
             return new Promise(resolve => setTimeout(resolve, wait)).then(() => { results.push(x); return x; });
-        }
+        };
         const tasks = [
             () => thenAdd(1, 500),
             () => thenAdd(2, 50),
