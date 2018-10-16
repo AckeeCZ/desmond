@@ -30,12 +30,15 @@ TODO
  - ~~`sqlColumnsListPromise`~~ deprecated alias for `tableColumns`
  - [`transacted`](./docs/README.md#const-transacted)
 
+### Promises
+ - [`promiseChain`](./docs/README.md#const-promisechain)
+ - [`promisify`](./docs/README.md#promisify)
+
 ### Other
  - [`createDateWithMinutesFromNow`](./docs/README.md#const-createdatewithminutesfromnow)
  - [`parseBool`](./docs/README.md#const-parsebool)
  - ~~`toBoolean`~~ deprecated alias for `parseBool`
  - [`generateRandomAlphanumeric`](./docs/README.md#const-generaterandomalphanumeric)
- - [`promiseChain`](./docs/README.md#const-promisechain)
 
 ## Development
 
