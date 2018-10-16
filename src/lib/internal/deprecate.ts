@@ -1,15 +1,19 @@
 const aliases: { [k: string]: string } = {
-    absoluteUrl: 'absoluteUrl',
+    fullUrlFromReq: 'absoluteUrl',
     nullOrToJSON: 'toJson',
     snakelize: 'snakelizeKeys',
     sqlColumnsListPromise: 'tableColumns',
     toBoolean: 'parseBool',
 };
 
+type wDepricatedName<T> = T & { depricatedName: string };
+
 const report = (fn: (p: any) => any) => {
-    const alias = aliases[fn.name];
-    const deprication = `Backend toolback [depricated]: ${fn.name} is depricated and will be removed.`;
-    const message = deprication + (alias ? ` Use ${alias} instead.` : '');
+    const dfn = fn as wDepricatedName<(p: any) => any>;
+    const name = dfn.depricatedName || dfn.name;
+    const alias = aliases[name];
+    const deprication = `Backend toolback [deprecated]: "${name}" is depricated and will be removed.`;
+    const message = deprication + (alias ? ` Use "${alias}" instead.` : '');
     // tslint:disable-next-line
     console.warn(message);
 };
