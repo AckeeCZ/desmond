@@ -1,4 +1,5 @@
 const aliases: { [k: string]: string } = {
+    _test: '_test',
     fullUrlFromReq: 'absoluteUrl',
     nullOrToJSON: 'toJson',
     snakelize: 'snakelizeKeys',
@@ -14,7 +15,7 @@ const report = (fn: (p: any) => any) => {
     const alias = aliases[name];
     const deprication = `Backend toolback [deprecated]: "${name}" is depricated and will be removed.`;
     const message = deprication + (alias ? ` Use "${alias}" instead.` : '');
-    // tslint:disable-next-line
+    // tslint:disable:no-console
     console.warn(message);
 };
 
