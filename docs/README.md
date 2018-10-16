@@ -20,7 +20,7 @@
 ### Functions
 
 * [absoluteUrl](#absoluteurl)
-* [compareBcrpyt](#comparebcrpyt)
+* [compareBcrypt](#comparebcrypt)
 * [createDateWithMinutesFromNow](#createdatewithminutesfromnow)
 * [generateRandomAlphanumeric](#generaterandomalphanumeric)
 * [hash](#hash)
@@ -51,7 +51,7 @@ ___
 
 **Ƭ Transaction**: *`any`*
 
-*Defined in index.d.ts:3*
+*Defined in index.d.ts:8*
 
 ___
 <a id="transactionfunction"></a>
@@ -60,7 +60,7 @@ ___
 
 **Ƭ TransactionFunction**: *`function`*
 
-*Defined in index.d.ts:4*
+*Defined in index.d.ts:9*
 
 #### Type declaration
 ▸(t: *[Transaction](#transaction)*): `any`
@@ -98,11 +98,11 @@ Creates absolute URL from express Request object
 absolute url
 
 ___
-<a id="comparebcrpyt"></a>
+<a id="comparebcrypt"></a>
 
-### `<Const>` compareBcrpyt
+### `<Const>` compareBcrypt
 
-▸ **compareBcrpyt**(plain: *`string`*, hashed: *`string`*): `Promise`<`boolean`>
+▸ **compareBcrypt**(plain: *`string`*, hashed: *`string`*): `Promise`<`boolean`>
 
 *Defined in lib/compareBcrypt.ts:3*
 
@@ -141,7 +141,7 @@ ___
 
 ▸ **generateRandomAlphanumeric**(num: *`number`*): `string`
 
-*Defined in lib/randomAfanumeric.ts:6*
+*Defined in lib/generateRandomAlphanumeric.ts:6*
 
 Generate a random afanumeric string of given lenght
 
@@ -259,7 +259,7 @@ ___
 
 ▸ **toJson**(model: *[Nullable](#nullable)<[Model](interfaces/model.md)>*, options?: *`object`*): `any`
 
-*Defined in lib/toJson.ts:15*
+*Defined in lib/toJson.ts:10*
 
 Transforms (usually database) object to pure JSON object using toJSON member function. If it does not have toJSON or object does not exist, it returns object itself.
 

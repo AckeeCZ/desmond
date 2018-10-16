@@ -11,7 +11,7 @@
     "test": "npm run build && NODE_PATH=src jest",
     "test:coverage": "npm run test -- --collectCoverage",
     "lint": "tslint -t codeFrame -p .",
-    "docs": "typedoc --readme none --includeDeclarations --excludeExternals --mode file --theme markdown --out docs src/lib src/*.d.ts",
+    "docs": "typedoc --readme none --includeDeclarations --excludeExternals --mode file --theme markdown --out docs src/lib/*.ts src/*.d.ts",
     "check": "npm-check -i app -i errors -i config -i index & exit 0"
   },
   "dependencies": {

@@ -22,7 +22,7 @@
 
 **● columnInfo**: *`function`*
 
-*Defined in index.d.ts:7*
+*Defined in index.d.ts:12*
 
 #### Type declaration
 ▸(): `Promise`<`any`>

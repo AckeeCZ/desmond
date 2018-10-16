@@ -1,7 +1,7 @@
 import { HexBase64Latin1Encoding } from 'crypto';
 import hash from 'lib/hash';
 
-describe('hash', () => {
+describe('createHash', () => {
     describe('Basic behavior', () => {
         const data = 'foo';
         test('Returns a string', () => {
