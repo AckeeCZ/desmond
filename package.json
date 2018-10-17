@@ -11,6 +11,7 @@
     "build": "tsc",
     "test": "npm run build && NODE_PATH=src jest",
     "test:coverage": "npm run test -- --collectCoverage",
+    "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "tslint -t codeFrame -p .",
     "docs": "typedoc --readme none --includeDeclarations --excludeExternals --mode file --theme markdown --out docs src/lib/*.ts src/*.d.ts",
     "check": "npm-check -i app -i errors -i config -i index & exit 0"
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/jest": "^23.3.5",
+    "coveralls": "^3.0.2",
     "jest": "^23.6.0",
     "npm-check": "^5.8.0",
     "ts-jest": "^23.10.4",
