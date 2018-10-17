@@ -1,6 +1,4 @@
-# Backend Toolbag :handbag:
-
-> The foreman lifted a lantern torch from the toolbag and descended the ladder.
+# Desmond
 
 Set of tools, functions and helpers for node back-end development.
 

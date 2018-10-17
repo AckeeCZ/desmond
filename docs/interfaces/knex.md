@@ -1,4 +1,4 @@
-[backend-toolbag](../README.md) > [Knex](../interfaces/knex.md)
+[desmond](../README.md) > [Knex](../interfaces/knex.md)
 
 # Interface: Knex
 

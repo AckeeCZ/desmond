@@ -1,5 +1,5 @@
 
-#  backend-toolbag
+#  desmond
 
 ## Index
 
@@ -409,7 +409,7 @@ ___
 
 *Defined in lib/tap.ts:5*
 
-Promise side effect. Inspired by common bluebird's Promise#tap
+Promise side effect. Inspired by common bluebird's `Promise#tap`
 
 **Type parameters:**
 
