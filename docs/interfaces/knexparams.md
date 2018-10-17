@@ -22,7 +22,7 @@
 
 **● transacting**: *[Transaction](../#transaction)*
 
-*Defined in lib/transacted.ts:2*
+*Defined in [lib/transacted.ts:2](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/transacted.ts#L2)*
 
 ___
 
