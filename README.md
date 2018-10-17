@@ -1,5 +1,7 @@
 # Desmond
 
+[![Build Status](https://api.travis-ci.com/AckeeCZ/desmond.svg?branch=master)](https://travis-ci.com/AckeeCZ/desmond)
+
 Set of tools, functions and helpers for node back-end development.
 
 ## Install
