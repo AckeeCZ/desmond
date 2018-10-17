@@ -11,6 +11,15 @@
     "type" : "git",
     "url" : "https://github.com/AckeeCZ/desmond"
   },
+  "keywords": [
+    "utility",
+    "tools",
+    "ackee",
+    "express",
+    "promise",
+    "knex",
+    "hash"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "npm run build && NODE_PATH=src jest",
