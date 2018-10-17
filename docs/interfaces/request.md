@@ -24,7 +24,7 @@
 
 **● get**: *`function`*
 
-*Defined in lib/absoluteUrl.ts:7*
+*Defined in [lib/absoluteUrl.ts:7](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/absoluteUrl.ts#L7)*
 
 #### Type declaration
 ▸(param: *`string`*): `string`
@@ -44,7 +44,7 @@ ___
 
 **● originalUrl**: *`string`*
 
-*Defined in lib/absoluteUrl.ts:6*
+*Defined in [lib/absoluteUrl.ts:6](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/absoluteUrl.ts#L6)*
 
 ___
 <a id="protocol"></a>
@@ -53,7 +53,7 @@ ___
 
 **● protocol**: *`string`*
 
-*Defined in lib/absoluteUrl.ts:5*
+*Defined in [lib/absoluteUrl.ts:5](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/absoluteUrl.ts#L5)*
 
 ___
 

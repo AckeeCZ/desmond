@@ -57,8 +57,8 @@ describe('toJson', () => {
             foo: 1,
             toJSON: () => complexJsonRes,
         };
-        const optionsParam = {...options};
-        const complexEntityParam = {...complexEntity};
+        const optionsParam = { ...options };
+        const complexEntityParam = { ...complexEntity };
         expect(toJson(complexEntityParam, optionsParam)).toBe(complexJsonRes);
         expect(optionsParam).toEqual(options);
         expect(complexEntityParam).toEqual(complexEntity);

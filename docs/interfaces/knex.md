@@ -9,7 +9,7 @@
 ## Callable
 ▸ **__call**(table: *`string`*): [KnexTable](knextable.md)
 
-*Defined in index.d.ts:16*
+*Defined in [index.d.ts:16](https://github.com/AckeeCZ/desmond/blob/6603eee/src/index.d.ts#L16)*
 
 **Parameters:**
 
@@ -35,7 +35,7 @@
 
 **● transaction**: *`function`*
 
-*Defined in index.d.ts:16*
+*Defined in [index.d.ts:16](https://github.com/AckeeCZ/desmond/blob/6603eee/src/index.d.ts#L16)*
 
 #### Type declaration
 ▸(fn: *[TransactionFunction](../#transactionfunction)*): `any`

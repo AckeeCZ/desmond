@@ -1,5 +1,9 @@
 # Desmond
 
+[![Build Status](https://api.travis-ci.com/AckeeCZ/desmond.svg?branch=master)](https://travis-ci.com/AckeeCZ/desmond)
+[![Coverage Status](https://coveralls.io/repos/github/AckeeCZ/desmond/badge.svg?branch=master)](https://coveralls.io/github/AckeeCZ/desmond?branch=master)
+[![Dependency Status](https://david-dm.org/AckeeCZ/desmond/status.svg)](https://david-dm.org/AckeeCZ/desmond)
+
 Set of tools, functions and helpers for node back-end development.
 
 ## Install

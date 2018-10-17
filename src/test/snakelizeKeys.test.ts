@@ -19,7 +19,7 @@ describe('snakelizeKeys', () => {
     });
     test('Argument pureness', () => {
         const input = { fooBarQuizz: 123, baz: true };
-        const inputParam = {...input};
+        const inputParam = { ...input };
         snakelize(inputParam);
         expect(inputParam).toEqual(input);
     });
