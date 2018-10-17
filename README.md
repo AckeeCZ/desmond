@@ -65,4 +65,4 @@ TODO
 
 ## License
 
-TODO
+This project is licensed under [MIT](./LICENSE).
