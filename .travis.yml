@@ -10,3 +10,11 @@ script:
 - npm run build
 - npm run test:coverage
 - npm run test:coveralls
+deploy:
+  provider: npm
+  email: ackeedevelopment@gmail.com
+  api_key:
+    secure: 8zNUntGhn8cUBWX6jU5NB7PCYULzXkIHXfbYaWVIQq/tB0reqq4EPWo5lHmBAGOG9qtR5tOnMYZKNndz6B0U3zftQjILW5/FLB3Ns0H5kZzYIEzk2nmzrq4kau0iTpyjs9ljI1Ldi+n0LlDjAzeBF2MA97e1DV2HGSOLezdUaaZZkQ8e77RtcV2LBKv9p5Sa5TlZtun5kW/IzcO16x5xHt4ED3WuquFxHaaLx4VElhleAMSYkSilyTK85YNIrmPi+qzDghLTprmDhDOsnWm1zEve72jscFYCfCmFPM49Eo8X2MYsXNNzK51HZyx3c2YEWPjuXIhxuOq5tnK/9rqNpDqIMP5rFoSkTOvCinIObxw3oDUcPHeWjGrYMTfhac+0vH1HWBA8JTeIfKqhot4bAxZMj79B9FMrvvwpVPh7ZTqBiKpF5OwNKGOAnZx53z7qylzyRJ2L5/XftRh/UHKWO7/JMfwGFY8HzLsn/ezWZ99YaqQjzimCj5cEuDaTcMP7xo5mw8z3neHIJld9zyHyKl7h6ylyuirxyIeY5RaqvTY7lnN+Is9EuwSwcSGv/mj43ezCFGO7ajDKHlDaV2500HCo1cnV79mt2ifBvMYUUkv10rSi7/pIXql5yGfWsYjjxCpJpVySamOs4XgqxxdriWUfxpKVw/ypYKvQ2D+hJNA=
+  on:
+    tags: true
+    repo: AckeeCZ/desmond
