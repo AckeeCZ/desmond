@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && NODE_PATH=src jest",
+    "test": "NODE_PATH=src jest",
     "test:coverage": "npm run test -- --collectCoverage",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "tslint -t codeFrame -p .",

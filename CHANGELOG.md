@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
  - npmignore changelog and config files
 
+### Removed
+ - redundant build in ts-jest
+
 ## [0.2.0] - 2018-10-19
 ### Added
  - npm prepare
