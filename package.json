@@ -1,7 +1,7 @@
 {
   "name": "desmond",
   "description": "Set of tools, functions and helpers for node back-end development.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Jaroslav Šmolík <grissius@gmail.com>",
   "main": "./dist/main.js",
   "engines": {
