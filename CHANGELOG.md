@@ -5,20 +5,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.2.1] - 2018-10-19
 ### Fixed
- - Node version in engines
+- Node version in engines
 
 ### Changed
- - npmignore changelog and config files
+- npmignore changelog and config files
 
 ### Removed
- - redundant build in ts-jest
+- redundant build in ts-jest
 
 ## [0.2.0] - 2018-10-19
 ### Added
- - npm prepare
- - .npmignore
- - travis deploy
+- npm prepare
+- .npmignore
+- travis deploy
 
 ## [0.1.0] - 2018-10-17
 ### Added
@@ -46,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `conf.json`
 - `jsconfig.json`
 
-[Unreleased]: https://github.com/AckeeCZ/desmond/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/AckeeCZ/desmond/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/AckeeCZ/desmond/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/AckeeCZ/desmond/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/AckeeCZ/desmond/compare/d27f13b...v0.1.0
