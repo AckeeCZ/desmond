@@ -1,15 +1,15 @@
 {
   "name": "desmond",
   "description": "Set of tools, functions and helpers for node back-end development.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Jaroslav Šmolík <grissius@gmail.com>",
   "main": "./dist/main.js",
   "engines": {
     "node": "^8.3.0"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/AckeeCZ/desmond"
+    "type": "git",
+    "url": "https://github.com/AckeeCZ/desmond"
   },
   "keywords": [
     "utility",
