@@ -1,7 +1,7 @@
 import { randomBytes } from 'crypto';
 
 /**
- * Generate a random afanumeric string of given lenght
+ * Generate a random alphanumeric string of given length
  */
 const generateRandomAlphanumeric = (num: number) => {
     return randomBytes(Math.ceil(num * (3 / 4)))

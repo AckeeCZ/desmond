@@ -8,14 +8,14 @@ const aliases: { [k: string]: string } = {
     toBoolean: 'parseBool',
 };
 
-type wDepricatedName<T> = T & { depricatedName: string };
+type wDeprecatedName<T> = T & { deprecatedName: string };
 
 const report = (fn: (p: any) => any) => {
-    const dfn = fn as wDepricatedName<(p: any) => any>;
-    const name = dfn.depricatedName || dfn.name;
+    const dfn = fn as wDeprecatedName<(p: any) => any>;
+    const name = dfn.deprecatedName || dfn.name;
     const alias = aliases[name];
-    const deprication = `Backend toolback [deprecated]: "${name}" is depricated and will be removed.`;
-    const message = deprication + (alias ? ` Use "${alias}" instead.` : '');
+    const deprecation = `Backend toolback [deprecated]: "${name}" is deprecated and will be removed.`;
+    const message = deprecation + (alias ? ` Use "${alias}" instead.` : '');
     // tslint:disable:no-console
     console.warn(message);
 };
