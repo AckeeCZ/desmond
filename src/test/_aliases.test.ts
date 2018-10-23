@@ -22,7 +22,7 @@ describe('Aliases', () => {
             expect(typeof a).toBe('function');
         });
     });
-    test('Deprication works', () => {
+    test('Deprecation works', () => {
         // tslint:disable:no-console
         console.warn = () => null;
         const _test = (n: number) => n + 1;
