@@ -1,5 +1,6 @@
 // @ts-ignore
 import camelCase from 'lodash.camelcase';
+import { Knex } from './internal/types';
 
 /**
  * Return list of camelCased column names

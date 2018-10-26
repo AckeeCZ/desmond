@@ -1,3 +1,5 @@
+import { Knex, KnexTable, TransactionFunction } from 'lib/internal/types';
+
 const table: KnexTable = {
     columnInfo: () => Promise.resolve({}),
 };
