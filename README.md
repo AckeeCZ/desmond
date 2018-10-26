@@ -8,7 +8,7 @@ Set of tools, functions and helpers for node back-end development.
 
 ## Install
 
-```
+```shell
 npm i --save desmond
 ```
 
