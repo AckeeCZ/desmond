@@ -12,6 +12,17 @@ Set of tools, functions and helpers for node back-end development.
 npm i --save desmond
 ```
 
+## Usage
+```ts
+import { parseBool } from 'desmond'; // const { parseBool } = require('desmond');
+
+parseBool('false');
+```
+
+Project features Typescript definitions! :yum:
+
+To see what functions and tools are available, see the next section.
+
 ## Contents
 
 ### Express
