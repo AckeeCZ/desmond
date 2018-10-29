@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/AckeeCZ/desmond/badge.svg?branch=master)](https://coveralls.io/github/AckeeCZ/desmond?branch=master)
 [![Dependency Status](https://david-dm.org/AckeeCZ/desmond/status.svg)](https://david-dm.org/AckeeCZ/desmond)
 
-Set of tools, functions and helpers for node back-end development.
+Desmond is a caretaker of boilerplate code for node back-end development, providing a set of maintained tools.
 
 ## Install
 
