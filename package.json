@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/AckeeCZ/desmond"
   },
+  "license": "MIT",
   "keywords": [
     "utility",
     "tools",

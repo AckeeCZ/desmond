@@ -1,14 +1,29 @@
 # Desmond
 
-[![Build Status](https://api.travis-ci.com/AckeeCZ/desmond.svg?branch=master)](https://travis-ci.com/AckeeCZ/desmond)
-[![Coverage Status](https://coveralls.io/repos/github/AckeeCZ/desmond/badge.svg?branch=master)](https://coveralls.io/github/AckeeCZ/desmond?branch=master)
-[![Dependency Status](https://david-dm.org/AckeeCZ/desmond/status.svg)](https://david-dm.org/AckeeCZ/desmond)
+[![Build Status](https://img.shields.io/travis/com/AckeeCZ/desmond/master.svg?style=flat-square)](https://travis-ci.com/AckeeCZ/desmond)
+[![Coverage Status](https://img.shields.io/coveralls/github/AckeeCZ/desmond.svg?style=flat-square)](https://coveralls.io/github/AckeeCZ/desmond?branch=master)
+[![Dependency Status](https://img.shields.io/david/AckeeCZ/desmond.svg?style=flat-square)](https://david-dm.org/AckeeCZ/desmond)
+[![Npm](https://img.shields.io/npm/v/desmond.svg?style=flat-square)](https://www.npmjs.com/package/desmond)
+[![License](https://img.shields.io/github/license/AckeeCZ/desmond.svg?style=flat-square)](https://github.com/AckeeCZ/desmond/blob/master/LICENSE)
 
-Set of tools, functions and helpers for node back-end development.
+Desmond is a caretaker of boilerplate code for node back-end development, providing a set of maintained tools.
 
 ## Install
 
-TODO
+```shell
+npm i --save desmond
+```
+
+## Usage
+```ts
+import { parseBool } from 'desmond'; // const { parseBool } = require('desmond');
+
+parseBool('false');
+```
+
+Project features Typescript definitions! :yum:
+
+To see what functions and tools are available, see the next section.
 
 ## Contents
 
