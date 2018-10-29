@@ -1,3 +1,4 @@
+import { TransactionFunction } from 'lib/internal/types';
 import { isFunction } from 'lib/internal/validators';
 import transacted from 'lib/transacted';
 import createKnexMock from './mock/knex';

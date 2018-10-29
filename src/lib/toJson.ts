@@ -1,3 +1,4 @@
+import { Model, Nullable } from './internal/types';
 import { isFunction } from './internal/validators';
 
 /**
