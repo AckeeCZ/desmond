@@ -1,6 +1,6 @@
 import defaultsDeep from 'lodash.defaultsdeep';
 import { Response } from 'request';
-import * as request from 'request-promise';
+import request from 'request-promise';
 import * as url from 'url';
 
 
@@ -34,7 +34,7 @@ export default class RestMicroservice {
         // although the resolved `uri` could be without it - if `pathName` is equal to '/'
         this.logger.info({ uri, pathName, correlationId, qs: options.qs, body: options.body }, `--> ${this.baseUrl}`);
         const tStart = stopwatch.start();
-        return Promise.resolve(request.default(
+        return Promise.resolve(request(
             defaultsDeep(
                 {},
                 this.defaultOptions,
