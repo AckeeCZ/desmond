@@ -9,8 +9,8 @@ let infoLogs: any[] = [];
 let errorLogs: any[] = [];
 
 const logger = {
-    info: ((x: any) => (infoLogs = infoLogs.concat(x))),
     error: ((x: any) => (errorLogs = errorLogs.concat(x))),
+    info: ((x: any) => (infoLogs = infoLogs.concat(x))),
 };
 
 
