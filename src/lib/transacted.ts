@@ -1,3 +1,5 @@
+import { Knex, Transaction, TransactionFunction } from './internal/types';
+
 interface KnexParams {
     transacting?: Transaction;
 }

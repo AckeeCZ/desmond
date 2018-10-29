@@ -1,7 +1,7 @@
 {
   "name": "desmond",
-  "description": "Set of tools, functions and helpers for node back-end development.",
-  "version": "0.2.4",
+  "description": "Desmond is a caretaker of boilerplate code for node back-end development, providing a set of maintained tools.",
+  "version": "0.2.5",
   "author": "Jaroslav Šmolík <grissius@gmail.com>",
   "main": "./dist/main.js",
   "engines": {
@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/AckeeCZ/desmond"
   },
+  "license": "MIT",
   "keywords": [
     "utility",
     "tools",
