@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Typos
 - Missing shared types when using the package with Typescript
 
+### Changed
+- Package description
+
 ## [0.2.4] - 2018-10-19
 ### Fixed
 - Travis npm token ([com issue](https://github.com/travis-ci/travis-ci/issues/9403))
