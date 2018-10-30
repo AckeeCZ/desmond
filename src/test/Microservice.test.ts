@@ -79,7 +79,7 @@ describe('Microservice', () => {
                 .post(coffeePath)
                 .reply(200, body);
             // Response 200 is not OK. CoffeeMachine accepts as OK only 201. (Because serving existing coffee is forbidden)
-            await expect(coffeeMachine.brew()).rejects.toBeInstanceOf(StatusCodeError);
+            await expect(coffeeMachine.brew()).rejects.toBeInstanceOf(Error);
         });
     });
 });
