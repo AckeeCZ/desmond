@@ -56,7 +56,7 @@ describe('Microservice', () => {
     describe('Custom service', () => {
         const coffeeUrl = 'http://delic.io.us';
         const coffeePath = '/coffee';
-        const body = 'I\'m a teapot';
+        const body = 'Here is your hot pot you tot!';
         const status = 201;
         class CoffeeMachine extends Microservice {
             constructor() {
