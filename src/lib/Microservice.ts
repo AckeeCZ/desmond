@@ -20,11 +20,16 @@ const stopwatch = {
     },
 };
 
+const voidLogger: Logger = {
+    info: () => undefined,
+    error: () => undefined,
+};
+
 export default class Microservice {
     constructor(
         protected readonly baseUrl: string = '/',
         protected readonly defaultOptions: object = {},
-        protected readonly logger: Logger
+        protected readonly logger: Logger = voidLogger,
     ) { }
 
     public request(pathName: string, options: any = {}) {
