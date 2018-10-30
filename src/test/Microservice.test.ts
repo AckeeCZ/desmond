@@ -21,7 +21,7 @@ const service = new Microservice(
     },
     logger,
 );
-
+/* tslint:disable:max-classes-per-file */
 describe('Microservice', () => {
     describe('Basic spec', () => {
         const body = 'Microservice (micro) serves!';
@@ -80,6 +80,40 @@ describe('Microservice', () => {
                 .reply(200, body);
             // Response 200 is not OK. CoffeeMachine accepts as OK only 201. (Because serving existing coffee is forbidden)
             await expect(coffeeMachine.brew()).rejects.toBeInstanceOf(Error);
+        });
+    });
+
+    describe('Methods', () => {
+        class CrudService extends Microservice {
+            constructor() {
+                super(URL, { json: true }, logger);
+            }
+            public c = () => this.post('/');
+            public r = () => this.get('/');
+            public u = () => this.put('/');
+            public d = () => this.delete('/');
+        }
+        const crudService = new CrudService();
+        const body = {
+            c: 'new item',
+            r: 'read item',
+            u: 'updated item',
+            d: 'deleted item',
+        };
+        test('Matches status code and body', async () => {
+            nock(URL).post('/').reply(200, body.c);
+            nock(URL).get('/').reply(200, body.r);
+            nock(URL).put('/').reply(200, body.u);
+            nock(URL).delete('/').reply(200, body.d);
+
+            const responses = await Promise.all([
+                crudService.c(),
+                crudService.r(),
+                crudService.u(),
+                crudService.d(),
+            ]);
+            expect(responses.map(r => r.body)).toEqual([body.c, body.r, body.u, body.d]);
+            expect(responses.every(r => r.statusCode === 200)).toBe(true);
         });
     });
 });
