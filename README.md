@@ -28,35 +28,35 @@ To see what functions and tools are available, see the next section.
 ## Contents
 
 ### Express
- - [`absoluteUrl`](./docs/README.md#const-absoluteurl)
+ - [`absoluteUrl`](https://ackeecz.github.io/desmond/index.html#absoluteurl)
  - ~~`fullUrlFromReq`~~ deprecated alias for `absoluteUrl`
 
 ### Hashing
- - [`compareBcrypt`](./docs/README.md#const-comparebcrypt)
+ - [`compareBcrypt`](https://ackeecz.github.io/desmond/index.html#comparebcrypt)
  - ~~`createHash`~~ deprecated alias for `hash`
  - ~~`encodeBcrypt`~~ deprecated alias for `hashBcrypt`
- - [`hashBcrypt`](./docs/README.md#const-hashbcrypt)
- - [`hash`](./docs/README.md#const-hash)
+ - [`hashBcrypt`](https://ackeecz.github.io/desmond/index.html#hashbcrypt)
+ - [`hash`](https://ackeecz.github.io/desmond/index.html#hash)
 
 ### Database
- - [`snakelizeKeys`](./docs/README.md#const-snakelizekeys)
+ - [`snakelizeKeys`](https://ackeecz.github.io/desmond/index.html#snakelizekeys)
  - ~~`snakelize`~~ deprecated alias for `snakelizeKeys`
- - [`toJson`](./docs/README.md#const-tojson)
+ - [`toJson`](https://ackeecz.github.io/desmond/index.html#tojson)
  - ~~`nullOrToJSON`~~ deprecated alias for `toJson`
- - [`tableColumns`](./docs/README.md#const-tablecolumns)
+ - [`tableColumns`](https://ackeecz.github.io/desmond/index.html#tablecolumns)
  - ~~`sqlColumnsListPromise`~~ deprecated alias for `tableColumns`
- - [`transacted`](./docs/README.md#const-transacted)
+ - [`transacted`](https://ackeecz.github.io/desmond/index.html#transacted)
 
 ### Promises
- - [`promiseChain`](./docs/README.md#const-promisechain)
- - [`promisify`](./docs/README.md#promisify)
- - [`tap`](./docs/README.md#const-tap)
+ - [`promiseChain`](https://ackeecz.github.io/desmond/index.html#promisechain)
+ - [`promisify`](https://ackeecz.github.io/desmond/index.html#promisify)
+ - [`tap`](https://ackeecz.github.io/desmond/index.html#tap)
 
 ### Other
- - [`createDateWithMinutesFromNow`](./docs/README.md#const-createdatewithminutesfromnow)
- - [`parseBool`](./docs/README.md#const-parsebool)
+ - [`createDateWithMinutesFromNow`](https://ackeecz.github.io/desmond/index.html#createdatewithminutesfromnow)
+ - [`parseBool`](https://ackeecz.github.io/desmond/index.html#parsebool)
  - ~~`toBoolean`~~ deprecated alias for `parseBool`
- - [`generateRandomAlphanumeric`](./docs/README.md#const-generaterandomalphanumeric)
+ - [`generateRandomAlphanumeric`](https://ackeecz.github.io/desmond/index.html#generaterandomalphanumeric)
 
 ## Development
 

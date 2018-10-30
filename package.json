@@ -28,7 +28,7 @@
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "tslint -t codeFrame -p .",
     "prepare": "npm run build",
-    "docs": "typedoc --readme none --includeDeclarations --excludeExternals --mode file --theme markdown --out docs src/lib/*.ts src/lib/internal/types.ts",
+    "docs": "typedoc --options typedoc.json src/lib/*.ts src/lib/internal/types.ts",
     "check": "npm-check -i app -i errors -i config -i index & exit 0"
   },
   "dependencies": {
@@ -45,7 +45,6 @@
     "ts-jest": "^23.10.4",
     "tslint-config-ackee": "^0.2.1",
     "typedoc": "^0.13.0",
-    "typedoc-plugin-markdown": "^1.1.17",
     "typescript": "^3.1.2"
   }
 }
