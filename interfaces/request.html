@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Knex | desmond</title>
+	<title>Request | desmond</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="knex.html">Knex</a>
+					<a href="request.html">Request</a>
 				</li>
 			</ul>
-			<h1>Interface Knex</h1>
+			<h1>Interface Request</h1>
 		</div>
 	</div>
 </header>
@@ -68,29 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Knex</span>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3 class="tsd-before-signature">Callable</h3>
-				<ul class="tsd-signatures tsd-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span>table<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="knextable.html" class="tsd-signature-type">KnexTable</a></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/23bf8ca/src/lib/internal/types.ts#L16">internal/types.ts:16</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>table: <span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="knextable.html" class="tsd-signature-type">KnexTable</a></h4>
+						<span class="target">Request</span>
 					</li>
 				</ul>
 			</section>
@@ -101,7 +79,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="knex.html#transaction" class="tsd-kind-icon">transaction</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="request.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="request.html#originalurl" class="tsd-kind-icon">original<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="request.html#protocol" class="tsd-kind-icon">protocol</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,12 +90,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="transaction" class="tsd-anchor"></a>
-					<h3>transaction</h3>
-					<div class="tsd-signature tsd-kind-icon">transaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<a name="get" class="tsd-anchor"></a>
+					<h3>get</h3>
+					<div class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/23bf8ca/src/lib/internal/types.ts#L16">internal/types.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/0a1c194/src/lib/absoluteUrl.ts#L7">absoluteUrl.ts:7</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -123,22 +103,42 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><a href="../index.html#transactionfunction" class="tsd-signature-type">TransactionFunction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>param<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>fn: <a href="../index.html#transactionfunction" class="tsd-signature-type">TransactionFunction</a></h5>
+												<h5>param: <span class="tsd-signature-type">string</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="originalurl" class="tsd-anchor"></a>
+					<h3>original<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">original<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/0a1c194/src/lib/absoluteUrl.ts#L6">absoluteUrl.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="protocol" class="tsd-anchor"></a>
+					<h3>protocol</h3>
+					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/0a1c194/src/lib/absoluteUrl.ts#L5">absoluteUrl.ts:5</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -152,21 +152,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="../classes/microservice.html" class="tsd-kind-icon">Microservice</a>
-					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
+					<li class=" tsd-kind-interface">
 						<a href="knex.html" class="tsd-kind-icon">Knex</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="knex.html#transaction" class="tsd-kind-icon">transaction</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="knexparams.html" class="tsd-kind-icon">Knex<wbr>Params</a>
 					</li>
@@ -174,14 +162,26 @@
 						<a href="knextable.html" class="tsd-kind-icon">Knex<wbr>Table</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="logger.html" class="tsd-kind-icon">Logger</a>
-					</li>
-					<li class=" tsd-kind-interface">
 						<a href="model.html" class="tsd-kind-icon">Model</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="request.html" class="tsd-kind-icon">Request</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="request.html#get" class="tsd-kind-icon">get</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="request.html#originalurl" class="tsd-kind-icon">original<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="request.html#protocol" class="tsd-kind-icon">protocol</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="../index.html#callback" class="tsd-kind-icon">Callback</a>
 					</li>
