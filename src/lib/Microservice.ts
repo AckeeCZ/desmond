@@ -64,19 +64,19 @@ export default class Microservice {
             }) as Promise<Response>;
     }
 
-    public get(pathName: string, qs: object = {}, options: object = {}) {
+    public get(pathName: string = '/', qs: object = {}, options: object = {}) {
         return this.request(pathName, { ...options, qs, method: 'GET' });
     }
 
-    public put(pathName: string, payload: object = {}, options: object = {}) {
+    public put(pathName: string = '/', payload: object = {}, options: object = {}) {
         return this.request(pathName, { ...options, body: payload, method: 'PUT' });
     }
 
-    public post(pathName: string, payload: any = {}, options: object = {}) {
+    public post(pathName: string = '/', payload: any = {}, options: object = {}) {
         return this.request(pathName, { ...options, body: payload, method: 'POST' });
     }
 
-    public delete(pathName: string, options: object = {}) {
+    public delete(pathName: string = '/', options: object = {}) {
         return this.request(pathName, { ...options, method: 'DELETE' });
     }
 

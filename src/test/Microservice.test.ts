@@ -83,15 +83,15 @@ describe('Microservice', () => {
         });
     });
 
-    describe('Methods', () => {
+    describe('CRUD Methods', () => {
         class CrudService extends Microservice {
             constructor() {
                 super(URL, { json: true }, logger);
             }
-            public c = () => this.post('/');
-            public r = () => this.get('/');
-            public u = () => this.put('/');
-            public d = () => this.delete('/');
+            public c = () => this.post();
+            public r = () => this.get();
+            public u = () => this.put();
+            public d = () => this.delete();
         }
         const crudService = new CrudService();
         const body = {
