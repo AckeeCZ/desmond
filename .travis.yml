@@ -28,4 +28,4 @@ deploy:
     local-dir: ./docs
     verbose: true
     on:
-      all_branches: true
+      branch: master
