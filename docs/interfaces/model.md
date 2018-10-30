@@ -26,7 +26,7 @@
 **● toJSON**: * `undefined` &#124; `function`
 *
 
-*Defined in [index.d.ts:5](https://github.com/AckeeCZ/desmond/blob/6603eee/src/index.d.ts#L5)*
+*Defined in [internal/types.ts:5](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/internal/types.ts#L5)*
 
 ___
 

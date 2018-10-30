@@ -22,7 +22,7 @@
 
 **● columnInfo**: *`function`*
 
-*Defined in [index.d.ts:12](https://github.com/AckeeCZ/desmond/blob/6603eee/src/index.d.ts#L12)*
+*Defined in [internal/types.ts:12](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/internal/types.ts#L12)*
 
 #### Type declaration
 ▸(): `Promise`<`any`>
