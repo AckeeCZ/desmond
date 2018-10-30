@@ -27,3 +27,5 @@ deploy:
     keep-history: true
     local-dir: ./docs
     verbose: true
+    on:
+      all_branches: true
