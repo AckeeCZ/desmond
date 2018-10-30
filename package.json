@@ -28,7 +28,7 @@
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "tslint -t codeFrame -p .",
     "prepare": "npm run build",
-    "docs": "typedoc --readme none --includeDeclarations --excludeExternals --mode file --theme markdown --out docs src/lib/*.ts src/*.d.ts",
+    "docs": "typedoc --readme none --includeDeclarations --excludeExternals --mode file --theme markdown --out docs src/lib/*.ts src/lib/internal/types.ts",
     "check": "npm-check -i app -i errors -i config -i index & exit 0"
   },
   "dependencies": {
