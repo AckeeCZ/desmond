@@ -1,4 +1,4 @@
-import RestMicroservice from 'lib/RestMicroservice';
+import Microservice from 'lib/Microservice';
 import nock from 'nock';
 import { StatusCodeError } from 'request-promise/errors';
 
@@ -14,7 +14,7 @@ const logger = {
 };
 
 
-const service = new RestMicroservice(
+const service = new Microservice(
     URL,
     {
         json: true,
@@ -22,7 +22,7 @@ const service = new RestMicroservice(
     logger,
 );
 
-describe('RestMicroservice', () => {
+describe('Microservice', () => {
     describe('Basic spec', () => {
         const body = 'Microservice (micro) serves!';
         const status = 200;
@@ -58,11 +58,11 @@ describe('RestMicroservice', () => {
         const coffeePath = '/coffee';
         const body = 'I\'m a teapot';
         const status = 201;
-        class CoffeeMachine extends RestMicroservice {
+        class CoffeeMachine extends Microservice {
             constructor() {
                 super(coffeeUrl, { json: true }, logger);
             }
-            private static coffeeOkCodes = RestMicroservice.okCodes([201]);
+            private static coffeeOkCodes = Microservice.okCodes([201]);
             public brew = () => this.post('/coffee').then(CoffeeMachine.coffeeOkCodes);
         }
         const coffeeMachine = new CoffeeMachine();

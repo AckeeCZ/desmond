@@ -20,7 +20,7 @@ const stopwatch = {
     },
 };
 
-export default class RestMicroservice {
+export default class Microservice {
     constructor(
         protected readonly baseUrl: string = '/',
         protected readonly defaultOptions: object = {},
