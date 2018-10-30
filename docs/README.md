@@ -45,7 +45,7 @@
 
 **Ƭ Callback**: *`function`*
 
-*Defined in [lib/promisify.ts:1](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/promisify.ts#L1)*
+*Defined in [promisify.ts:1](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/promisify.ts#L1)*
 
 #### Type declaration
 ▸(e: *`any`*, res?: *[T]()*): `void`
@@ -67,7 +67,7 @@ ___
 **Ƭ Nullable**: * `T` &#124; `null`
 *
 
-*Defined in [index.d.ts:1](https://github.com/AckeeCZ/desmond/blob/6603eee/src/index.d.ts#L1)*
+*Defined in [internal/types.ts:1](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/internal/types.ts#L1)*
 
 ___
 <a id="transaction"></a>
@@ -76,7 +76,7 @@ ___
 
 **Ƭ Transaction**: *`any`*
 
-*Defined in [index.d.ts:8](https://github.com/AckeeCZ/desmond/blob/6603eee/src/index.d.ts#L8)*
+*Defined in [internal/types.ts:8](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/internal/types.ts#L8)*
 
 ___
 <a id="transactionfunction"></a>
@@ -85,7 +85,7 @@ ___
 
 **Ƭ TransactionFunction**: *`function`*
 
-*Defined in [index.d.ts:9](https://github.com/AckeeCZ/desmond/blob/6603eee/src/index.d.ts#L9)*
+*Defined in [internal/types.ts:9](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/internal/types.ts#L9)*
 
 #### Type declaration
 ▸(t: *[Transaction](#transaction)*): `any`
@@ -108,7 +108,7 @@ ___
 
 ▸ **absoluteUrl**(req: *[Request](interfaces/request.md)*):  `null` &#124; `string`
 
-*Defined in [lib/absoluteUrl.ts:20](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/absoluteUrl.ts#L20)*
+*Defined in [absoluteUrl.ts:20](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/absoluteUrl.ts#L20)*
 
 Creates absolute URL from express Request object
 
@@ -129,7 +129,7 @@ ___
 
 ▸ **compareBcrypt**(plain: *`string`*, hashed: *`string`*): `Promise`<`boolean`>
 
-*Defined in [lib/compareBcrypt.ts:3](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/compareBcrypt.ts#L3)*
+*Defined in [compareBcrypt.ts:3](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/compareBcrypt.ts#L3)*
 
 **Parameters:**
 
@@ -147,7 +147,7 @@ ___
 
 ▸ **createDateWithMinutesFromNow**(minutes: *`number`*): `Date`
 
-*Defined in [lib/createDateWithMinutesFromNow.ts:4](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/createDateWithMinutesFromNow.ts#L4)*
+*Defined in [createDateWithMinutesFromNow.ts:4](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/createDateWithMinutesFromNow.ts#L4)*
 
 Create a date in given minutes future
 
@@ -166,9 +166,9 @@ ___
 
 ▸ **generateRandomAlphanumeric**(num: *`number`*): `string`
 
-*Defined in [lib/generateRandomAlphanumeric.ts:6](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/generateRandomAlphanumeric.ts#L6)*
+*Defined in [generateRandomAlphanumeric.ts:6](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/generateRandomAlphanumeric.ts#L6)*
 
-Generate a random afanumeric string of given lenght
+Generate a random alphanumeric string of given length
 
 **Parameters:**
 
@@ -185,9 +185,9 @@ ___
 
 ▸ **hash**(data: *`string`*, algorithm?: *`string`*, encoding?: *`HexBase64Latin1Encoding`*):  `null` &#124; `string`
 
-*Defined in [lib/hash.ts:8](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/hash.ts#L8)*
+*Defined in [hash.ts:8](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/hash.ts#L8)*
 
-Create a has from input string
+Create a hash from input string
 
 **Parameters:**
 
@@ -208,7 +208,7 @@ ___
 
 ▸ **hashBcrypt**(plain: *`string`*, saltRounds?: *`number`*): `Promise`<`string`>
 
-*Defined in [lib/hashBcrypt.ts:3](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/hashBcrypt.ts#L3)*
+*Defined in [hashBcrypt.ts:3](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/hashBcrypt.ts#L3)*
 
 **Parameters:**
 
@@ -226,7 +226,7 @@ ___
 
 ▸ **parseBool**(value: *`any`*): `boolean`
 
-*Defined in [lib/parseBool.ts:9](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/parseBool.ts#L9)*
+*Defined in [parseBool.ts:9](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/parseBool.ts#L9)*
 
 Parse bool from string (`"0"`, `"false"` --> `false`, else `true`), number (`0` --> `false`, else `true`), or boolean
 
@@ -245,7 +245,7 @@ ___
 
 ▸ **promiseChain**<`T`>(tasks: *`Array`<`function`>*): `Promise`<`T`[]>
 
-*Defined in [lib/promiseChain.ts:6](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/promiseChain.ts#L6)*
+*Defined in [promiseChain.ts:6](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/promiseChain.ts#L6)*
 
 Run tasks sequentially, resolving the resulting promises and accumulating the result in an array
 
@@ -276,7 +276,7 @@ ___
 
 ▸ **promisify**<`T1`,`T2`,`T3`,`T4`,`TRes`>(fn: *`function`*): `function`
 
-*Defined in [lib/promisify.ts:3](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/promisify.ts#L3)*
+*Defined in [promisify.ts:3](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/promisify.ts#L3)*
 
 Promisify a callback function
 
@@ -291,7 +291,7 @@ Promisify a callback function
 
 **Returns:** `function`
 
-*Defined in [lib/promisify.ts:4](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/promisify.ts#L4)*
+*Defined in [promisify.ts:4](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/promisify.ts#L4)*
 
 Promisify a callback function
 
@@ -307,7 +307,7 @@ Promisify a callback function
 
 **Returns:** `function`
 
-*Defined in [lib/promisify.ts:5](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/promisify.ts#L5)*
+*Defined in [promisify.ts:5](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/promisify.ts#L5)*
 
 Promisify a callback function
 
@@ -324,7 +324,7 @@ Promisify a callback function
 
 **Returns:** `function`
 
-*Defined in [lib/promisify.ts:6](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/promisify.ts#L6)*
+*Defined in [promisify.ts:6](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/promisify.ts#L6)*
 
 Promisify a callback function
 
@@ -342,7 +342,7 @@ Promisify a callback function
 
 **Returns:** `function`
 
-*Defined in [lib/promisify.ts:7](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/promisify.ts#L7)*
+*Defined in [promisify.ts:7](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/promisify.ts#L7)*
 
 Promisify a callback function
 
@@ -368,7 +368,7 @@ ___
 
 ▸ **snakelizeKeys**(input: * `object` &#124; `Array`<`object`>*): `object`
 
-*Defined in [lib/snakelizeKeys.ts:10](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/snakelizeKeys.ts#L10)*
+*Defined in [snakelizeKeys.ts:10](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/snakelizeKeys.ts#L10)*
 
 Snakelize keys of given object(s). Only top level keys are transformed. Keys are assumed to be camelCase.
 
@@ -387,7 +387,7 @@ ___
 
 ▸ **tableColumns**(knex: *[Knex](interfaces/knex.md)*, table: *`string`*): `Promise`<`Object`[]>
 
-*Defined in [lib/tableColumns.ts:9](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/tableColumns.ts#L9)*
+*Defined in [tableColumns.ts:10](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/tableColumns.ts#L10)*
 
 Return list of camelCased column names
 
@@ -407,7 +407,7 @@ ___
 
 ▸ **tap**<`T`>(handler: *`function`*): `(Anonymous function)`
 
-*Defined in [lib/tap.ts:5](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/tap.ts#L5)*
+*Defined in [tap.ts:5](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/tap.ts#L5)*
 
 Promise side effect. Inspired by common bluebird's `Promise#tap`
 
@@ -429,7 +429,7 @@ ___
 
 ▸ **toJson**(model: *[Nullable](#nullable)<[Model](interfaces/model.md)>*, options?: *`object`*): `any`
 
-*Defined in [lib/toJson.ts:10](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/toJson.ts#L10)*
+*Defined in [toJson.ts:11](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/toJson.ts#L11)*
 
 Transforms (usually database) object to pure JSON object using toJSON member function. If it does not have toJSON or object does not exist, it returns object itself.
 
@@ -450,7 +450,7 @@ ___
 
 ▸ **transacted**(knex: *[Knex](interfaces/knex.md)*, params: *[KnexParams](interfaces/knexparams.md)*): [TransactionFunction](#transactionfunction)
 
-*Defined in [lib/transacted.ts:10](https://github.com/AckeeCZ/desmond/blob/6603eee/src/lib/transacted.ts#L10)*
+*Defined in [transacted.ts:12](https://github.com/AckeeCZ/desmond/blob/d5e9561/src/lib/transacted.ts#L12)*
 
 Create a function with parameter `Transaction`. `Transaction` is either passed on from `params.transacting`, or new transaction is created using `knex.transaction`.
 
