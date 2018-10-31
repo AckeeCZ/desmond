@@ -10,12 +10,22 @@ script:
 - npm run build
 - npm run test:coverage
 - npm run test:coveralls
+- npm run docs
 deploy:
-  provider: npm
-  email: ackeedevelopment@gmail.com
-  skip_cleanup: true
-  api_key:
-    secure: WPySYXAzc1ii0i4KrKWK+49Htm4nZ6uUemNvdmV+nG2BPAMEjytc0dXT117BUpTXeLwWZtcTEKRvtJA/EoXBtVsgnZOWuEMG0AMNqeaNVX2+7W5oK6Nh37yUsPUJhhZ4+kRppj3JZETup8spPxMtE40x+RzFYA6GXfd6YVN2QoMb0oH1vHx569BzketkmczUNC54GPz9p3Cm8W1sXvYpBJmJwmVKAa6Xy9tjv639fxUgD8HIEJFiOUFwX10riRny2KXsSXfOmDsQ8DJZbA6gyyXxAHoh4MQ8vv63U+KH7DV9F/BK+wxYaD7qgLw2/VPigtvUt1dG3rXG8FB2ACxq0DK6ANzR8VENdO7lJ7vZ8Q/mZluwb8dA0tx/BDUHA5ULvqbePAc3WpWAsNXS2jVwgUkkXDPm3/2+Eom0MLYXbPUiNhjn3rdMEr/pZKmUj3RqV4UjEXuqujZtvdUoOzjL912+bGq05oG05Q/az9OVg/hpUdjKJZ7XloHJfytJhQ0JDYCU/Jj2Cn2wCAkGj7cMiN9r3dea5m3/qKYW8pg0kQdLzWFyC48vLfPbXtGFhNe+tXHgFU/AJp9KzDk/sEaMC5xZWUDmhK5Fxtd1892LyJ6p5rD0O+CQvGKCZ+NrOCkYziB2rOYM1DQRhTcIzP3JfdBIgNIc4Nio5ozgsboSReY=
-  on:
-    tags: true
-    repo: AckeeCZ/desmond
+  - provider: npm
+    email: ackeedevelopment@gmail.com
+    skip_cleanup: true
+    api_key:
+      secure: WPySYXAzc1ii0i4KrKWK+49Htm4nZ6uUemNvdmV+nG2BPAMEjytc0dXT117BUpTXeLwWZtcTEKRvtJA/EoXBtVsgnZOWuEMG0AMNqeaNVX2+7W5oK6Nh37yUsPUJhhZ4+kRppj3JZETup8spPxMtE40x+RzFYA6GXfd6YVN2QoMb0oH1vHx569BzketkmczUNC54GPz9p3Cm8W1sXvYpBJmJwmVKAa6Xy9tjv639fxUgD8HIEJFiOUFwX10riRny2KXsSXfOmDsQ8DJZbA6gyyXxAHoh4MQ8vv63U+KH7DV9F/BK+wxYaD7qgLw2/VPigtvUt1dG3rXG8FB2ACxq0DK6ANzR8VENdO7lJ7vZ8Q/mZluwb8dA0tx/BDUHA5ULvqbePAc3WpWAsNXS2jVwgUkkXDPm3/2+Eom0MLYXbPUiNhjn3rdMEr/pZKmUj3RqV4UjEXuqujZtvdUoOzjL912+bGq05oG05Q/az9OVg/hpUdjKJZ7XloHJfytJhQ0JDYCU/Jj2Cn2wCAkGj7cMiN9r3dea5m3/qKYW8pg0kQdLzWFyC48vLfPbXtGFhNe+tXHgFU/AJp9KzDk/sEaMC5xZWUDmhK5Fxtd1892LyJ6p5rD0O+CQvGKCZ+NrOCkYziB2rOYM1DQRhTcIzP3JfdBIgNIc4Nio5ozgsboSReY=
+    on:
+      tags: true
+      repo: AckeeCZ/desmond
+  - provider: pages
+    skip-cleanup: true
+    github-token:
+      secure: iPWbnDqYXWm+YZpx0wQlUNZXwnPyxg7N6ARB/u862E34PH++zU9tKLLUDMTxBQoF1qGigiESNRwohyi8ToZJSTQnlpSwKl5QRWpVvCDY1AfuNsBTfVd0ZQxB027HlHq0SBvvHXmA/+jJgSg0Zx+L8yShXhqbsSjhqqMef61fM0faDIOZ0mrmSAQKVWAhPoPkRZj0RqazePDWDFDr/EcxXmMSGQs4/I59d63t8iZatawg65ej8mw79vHSFtNpKARVCtw3qD6yRz0WtabxXkLb49mAt0aWqBkLmpEAG7YhtYS/MYH2XagbfuNVi952IftlctM+Sda6cxNvugkRO4sKw0p2FR7ST2AIaEQ6AmOm7U5EKMwG3VqHsf525eS5pbj7ciSKEfd28gOY4ybYoegjHYbL+csUkFCsoM/C3R5/a15x7JFElOpgLrhg0BsveTzYbUqIM9AHhVN/6EyctASFYYCJGFzZ0n5i3/zfba5SmWySvksaw3gYEzzpl/eTVFBT5VmEBIL1NBRwPvuNdwtxlxr/DgaKRDVuff0ZLzkKZNHSf2RutAR6/+oDeKohaUwqN6hudaseDJZABKLKpTJjbgUQ2180muMaatdqjRuVFS2RUHKwO4Cm8tDJ42I1VXSedVaugIiQcsVykKSzV+MrzzsoanmTIDQGmcp+6hDFCMI=
+    keep-history: true
+    local-dir: ./docs
+    verbose: true
+    on:
+      branch: master

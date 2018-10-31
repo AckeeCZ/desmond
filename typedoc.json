@@ -1,0 +1,7 @@
+{
+    "includeDeclarations": true,
+    "excludeExternals": true,
+    "name": "Desmond",
+    "mode": "file",
+    "out": "docs"
+}
