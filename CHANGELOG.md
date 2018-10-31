@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - License to package.json
 - Install and usage
+- Travis GH Pages Typedoc publishing
 
 ### Fixed
 - Typos
@@ -17,6 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Package description
+- Use typedoc HTML docs
+
+### Removed
+- Markdown docs
 
 ## [0.2.4] - 2018-10-19
 ### Fixed
