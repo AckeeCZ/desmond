@@ -25,7 +25,59 @@ const voidLogger: Logger = {
     error: () => undefined,
 };
 
+/**
+ * Microservice provides an API for remote RESTful service.
+ *
+ * It allows user to utilize either bare REST methods with shared configuration or to wrap custom, more complex methods in the class.
+ * @example
+ * Basic Rest service usage
+ * ```typescript
+ * const apiService = new Microservice(
+ *      'https://jsonplaceholder.typicode.com',
+ *      { json: true },
+ *      console, // use any logger or leave empty for disabled logging
+ * );
+ * apiService.get('/posts');
+ * ```
+ * @example
+ * Custom service methods example
+ * ```typescript
+ * class PlaceholderService extends Microservice {
+ *     constructor() {
+ *         super(
+ *             'https://jsonplaceholder.typicode.com',
+ *             { json: true },
+ *             console,
+ *         );
+ *     }
+ *     public getPosts(userId: number) {
+ *         return Promise.all([
+ *             this.get('/posts'),
+ *             this.get(`/users/${userId}/posts`),
+ *         ])
+ *         .then(rs => rs.map(r => r.body))
+ *         .then(([publicPosts, privatePosts]) => ([...publicPosts, ...privatePosts]));
+ *     }
+ * }
+ * const placeholderService = new PlaceholderService();
+ * placeholderService.getPosts(user.id);
+ * ```
+ * @example
+ * Using okCodes handler creator
+ * ```typescript
+ * class CoffeService extends Microservice {
+ *      // create a handler and add it to call to force error on other codes than 201
+ *      // because in our CoffeService it only makes sense to brew new coffee every time
+ *      public brew = () => this.post('/coffee').then(Microservice.okCodes([201]));
+ *  }
+ * ```
+ */
 export default class Microservice {
+    /**
+     * Initialize Microservice on given URL with implicit configuration shared in all service calls.
+     * @param baseUrl Base url of the service without path
+     * @param defaultOptions Default options for request
+     */
     constructor(
         protected readonly baseUrl: string = '/',
         protected readonly defaultOptions: object = {},
@@ -85,6 +137,13 @@ export default class Microservice {
         return this.request(pathName, { ...options, method: 'DELETE' });
     }
 
+    /**
+     * Create a statusCode handler for throwing error on other than specified codes
+     *
+     * See Microservice @example
+     * @static
+     * @memberof Microservice
+     */
     public static okCodes = (codes: number[]) =>
         (response: Response): Response => {
             if (!response) {
