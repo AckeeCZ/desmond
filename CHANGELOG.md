@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - License to package.json
 - Install and usage
 - Travis GH Pages Typedoc publishing
+- Microservice
 
 ### Fixed
 - Typos
