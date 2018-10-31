@@ -84,7 +84,7 @@ export default class Microservice {
         protected readonly logger: Logger = voidLogger,
     ) { }
 
-    public request(pathName: string, options: any = {}) {
+    protected request(pathName: string, options: any = {}) {
         const uri = url.resolve(this.baseUrl, pathName);
         const correlationId = Math.random().toString(36).slice(7);
         // Caution: `this.baseUrl` could be with a path,
