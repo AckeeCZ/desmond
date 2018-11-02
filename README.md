@@ -53,6 +53,7 @@ To see what functions and tools are available, see the next section.
  - [`tap`](https://ackeecz.github.io/desmond/globals.html#tap)
 
 ### Other
+ - [`Microservice`](https://ackeecz.github.io/desmond/classes/microservice.html)
  - [`createDateWithMinutesFromNow`](https://ackeecz.github.io/desmond/globals.html#createdatewithminutesfromnow)
  - [`parseBool`](https://ackeecz.github.io/desmond/globals.html#parsebool)
  - ~~`toBoolean`~~ deprecated alias for `parseBool`
