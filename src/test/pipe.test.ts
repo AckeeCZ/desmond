@@ -14,6 +14,9 @@ describe('pipe', () => {
         await expect(answer).toBeInstanceOf(Promise);
         await expect(answer).resolves.toBe(42);
     });
+    test('Empty pipe returns arguments', async () => {
+        await expect(pipe()(42)).resolves.toEqual([42]);
+    });
     test('Handles mixed promises / values', async () => {
         const count = pipe(
             alwaysConcatP('ein'),
