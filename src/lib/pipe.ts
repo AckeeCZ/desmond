@@ -50,11 +50,8 @@ function pipe<D1, D2, D3, D4, D5, DRes, R1, R2, R3, R4, R5>(
 function pipe(...fns: any[]): any {
     return (...initialArgs: any) =>
         fns.reduce((pendingLastResult, fn, i) => pendingLastResult.then((lastResult: any) => {
-            const currentResult = fn(
-                // The first function receives all the arguments passed to the composed function
-                // The others just the one result from the previous one.
-                ...(i ? [lastResult] : lastResult)
-            );
+            // first iteration (lastResult is initialArgs), spread into delta function
+            const currentResult = i === 0 ? fn(...lastResult) : fn(lastResult);
             return Array.isArray(currentResult) ? Promise.all(currentResult) : currentResult;
         }), Promise.all(initialArgs));
 }
