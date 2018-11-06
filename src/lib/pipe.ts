@@ -14,7 +14,7 @@ export type DeltaFn<T1, T2, T3, T4, T5, TRes> =
     | DeltaFn5<T1, T2, T3, T4, T5, TRes>;
 
 // River function -- other functions in composition flow: one input, one output
-type RiverFn<T, TRes> = (p: T) => TRes | Promise<TRes>;
+type RiverFn<T, TRes> = ((p: T) => TRes | Promise<TRes>) | ((p: T[]) => TRes | Promise<TRes>);
 
 // Shorthand for return type of pipe (only replace return value of Delta function)
 // see https://stackoverflow.com/a/50014868
