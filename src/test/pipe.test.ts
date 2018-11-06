@@ -1,9 +1,9 @@
-import pipe from 'lib/pipe';
+import pipe, { DeltaFn0 } from 'lib/pipe';
 
-const always = (x: any) => () => x;
-const alwaysP = (x: any) => () => Promise.resolve(x);
-const alwaysConcat = (x: any) => (chain = []) => [...chain, x];
-const alwaysConcatP = (x: any) => (chain = []) => Promise.resolve([...chain, x]);
+const always = <T>(x: T) => () => x;
+const alwaysP = <T>(x: T) => () => Promise.resolve(x);
+const alwaysConcat = <T>(x: T) => (chain: T[] = []) => [...chain, x];
+const alwaysConcatP = <T>(x: T) => (chain: T[] = []) => Promise.resolve([...chain, x]);
 const sumArr = (arr: number[]) => arr.reduce((a, b) => a + b, 0);
 const sumVar = (...arr: number[]) => arr.reduce((a, b) => a + b, 0);
 const multiply = (a: number) => (b: number) => a * b;
@@ -50,8 +50,8 @@ describe('pipe', () => {
         await expect(inverseDeltaSum(4, 3)).resolves.toEqual(24);
     });
     test('Typings correct', async () => {
-        const parseNumbers = (a: string, b: string) => [a, b].map(Number);
-        const addTwo = (a: number, b: number) => a + b;
+        const parseNumbers = (a: string, b: string): [number, number] => [Number(a), Number(b)];
+        const addTwo = ([a, b]: [number, number]) => a + b;
         const isLarge = (x: number) => x > 3;
         const process = pipe(parseNumbers, addTwo, isLarge);
         // const process = (a: string, b: string): boolean => pipe(parseNumbers, addTwo, isLarge);
