@@ -46,6 +46,8 @@ function pipe<D1, D2, D3, D4, D5, DRes, R1, R2, R3, R4, R5>(
     r4: RiverFn<R3, R4>,
     r5: RiverFn<R4, R5>
 ): ReplaceReturnTypePromise<DeltaFn<D1, D2, D3, D4, D5, DRes>, R5>;
+function pipe<D1, D2, D3, D4, D5, DRes, Res>(df: DeltaFn<D1, D2, D3, D4, D5, DRes>, ...fns: any[]):
+    ReplaceReturnTypePromise<DeltaFn<D1, D2, D3, D4, D5, DRes>, any>;
 
 /**
  * Create a function composed of provided functions in left-to-right execution chain.

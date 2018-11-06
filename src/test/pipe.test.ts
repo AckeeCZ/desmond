@@ -56,6 +56,10 @@ describe('pipe', () => {
         const process: (a: string, b: string) => Promise<boolean> = pipe(parseNumbers, addTwo, isLarge);
         const res: boolean = await process('5', '1');
 
-        await expect(res).toBeTruthy;
+        await expect(res).resolves.toBe(true);
+    });
+    test('Typings take out-of-bounds list of functions', async () => {
+        const longPipe = pipe(always(1), always(1), always(1), always(1), always(1), always(1), always(1), always(1), always(1));
+        await expect(longPipe()).resolves.toEqual(1);
     });
 });
