@@ -96,9 +96,9 @@ describe('Microservice', () => {
         const crudService = new CrudService();
         const body = {
             c: 'new item',
+            d: 'deleted item',
             r: 'read item',
             u: 'updated item',
-            d: 'deleted item',
         };
         test('Matches status code and body', async () => {
             nock(URL).post('/').reply(200, body.c);
