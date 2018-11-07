@@ -4,7 +4,17 @@ import { isString } from './internal/validators';
 
 /**
  * Snakelize string or keys of given object(s) if provided. Only top level keys are transformed when handling object(s).
- * Keys are assumed to be camelCase.
+ * Input strings / keys assumed to be camelCase.
+ *
+ * ```typescript
+ * snakelize('CamelCase') // ~ camel_case
+ * // dots are preserved
+ * snakelize('FancyCars.LicenseNumber') // ~ fancy_cars.license_number
+ * ```
+ *
+ * ```typescript
+ * snakelize([{snakelizeDis: {leaveThis: 1}}]) // [{snakelize_dis: {leaveThis: 1}}]
+ * ```
  */
 function snakelize(string: string): string;
 function snakelize(object: { [key: string]: any }): { [key: string]: any };
@@ -14,7 +24,7 @@ function snakelize(input: any) {
         return input.split('.').map(snakeCase).join('.');
     }
     return Array.isArray(input) ? input.map(o => mapKeys(o, snakeCase)) : mapKeys(input, snakeCase);
-};
+}
 
 
 export default snakelize;
