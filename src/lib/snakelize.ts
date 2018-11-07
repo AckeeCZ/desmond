@@ -23,7 +23,7 @@ function snakelize(input: any) {
     if (isString(input)) {
         return input.split('.').map(snakeCase).join('.');
     }
-    return Array.isArray(input) ? input.map(o => mapKeys(o, snakeCase)) : mapKeys(input, snakeCase);
+    return Array.isArray(input) ? input.map(o => mapKeys(o, snakelize)) : mapKeys(input, snakelize);
 }
 
 
