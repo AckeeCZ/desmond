@@ -4,15 +4,6 @@ describe('snakelize', () => {
     test('Snakelize string', () => {
         expect(snakelize('heyHowYouDoing')).toEqual('hey_how_you_doing');
     });
-    test('Snakelize composed string', () => {
-        expect(snakelize('DoesAnybodyHere.Remember.VeraLynn')).toEqual('does_anybody_here.remember.vera_lynn');
-        // expect(snakelize('CamelCase')).toEqual('camel_case');
-        // expect(snakelize('FancyCars.LicenseNumber')).toEqual('fancy_cars.license_number');
-        // expect(snakelize([{snakelizeDis: {leaveThis: 1}}])).toStrictEqual([{snakelize_dis: {leaveThis: 1}}]);
-    });
-    test('Snakelize composed nested string', () => {
-        expect(snakelize([{'aBc.aBc': 1}])).toEqual([{'a_bc.a_bc': 1}]);
-    });
     test('Snakelize object keys', () => {
         const input = { fooBar: 1, camelCaseFtw: 'PleaseKeepThisUntouched' };
         expect(snakelize(input)).toEqual({ foo_bar: input.fooBar, camel_case_ftw: input.camelCaseFtw });
