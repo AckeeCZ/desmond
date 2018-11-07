@@ -10,9 +10,7 @@ import { isString } from './internal/validators';
  * snakelize('CamelCase') // ~ camel_case
  * // dots are preserved
  * snakelize('FancyCars.LicenseNumber') // ~ fancy_cars.license_number
- * ```
- *
- * ```typescript
+ * // handles objects, but no recursive transformation
  * snakelize([{snakelizeDis: {leaveThis: 1}}]) // [{snakelize_dis: {leaveThis: 1}}]
  * ```
  */
