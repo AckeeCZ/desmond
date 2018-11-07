@@ -1,4 +1,3 @@
-// @ts-ignore
 import snakeCase from 'lodash.snakecase';
 import { mapKeys } from './internal/utils';
 
