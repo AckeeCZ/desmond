@@ -12,7 +12,6 @@ export { default as nullOrToJSON } from './lib/nullOrToJSON';
 export { default as parseBool } from './lib/parseBool';
 export { default as promiseChain } from './lib/promiseChain';
 export { default as promisify } from './lib/promisify';
-export { default as snakelizeKeys } from './lib/snakelizeKeys';
 export { default as snakelize } from './lib/snakelize';
 export { default as sqlColumnsListPromise } from './lib/sqlColumnsListPromise';
 export { default as tableColumns } from './lib/tableColumns';
