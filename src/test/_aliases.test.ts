@@ -3,7 +3,6 @@ import encodeBcrypt from 'lib/encodeBcrypt';
 import fullUrlFromReq from 'lib/fullUrlFromReq';
 import { deprecate } from 'lib/internal/deprecate';
 import nullOrToJSON from 'lib/nullOrToJSON';
-import snakelize from 'lib/snakelize';
 import sqlColumnsListPromise from 'lib/sqlColumnsListPromise';
 import toBoolean from 'lib/toBoolean';
 
@@ -12,7 +11,6 @@ const aliases = [
     createHash,
     fullUrlFromReq,
     nullOrToJSON,
-    snakelize,
     sqlColumnsListPromise,
     toBoolean,
 ];
