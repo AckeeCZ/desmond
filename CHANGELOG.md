@@ -11,9 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Use typedoc HTML docs
+- `snakelize` un-deprecated, improved and generalized
+
+### Fixed
+- `snakelize` to handle strings and dot composed strings
 
 ### Removed
 - Markdown docs
+- `snakelizeKeys` function
 
 ## [0.2.5] - 2018-10-29
 ### Added
