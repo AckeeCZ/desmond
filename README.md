@@ -47,6 +47,7 @@ To see what functions and tools are available, see the next section.
  - [`transacted`](https://ackeecz.github.io/desmond/globals.html#transacted)
 
 ### Promises
+ - [`pipe`](https://ackeecz.github.io/desmond/globals.html#pipe)
  - [`promiseChain`](https://ackeecz.github.io/desmond/globals.html#promisechain)
  - [`promisify`](https://ackeecz.github.io/desmond/globals.html#promisify)
  - [`tap`](https://ackeecz.github.io/desmond/globals.html#tap)
