@@ -4,25 +4,25 @@ type RiverFn<T, TRes> = ((p: T) => TRes | Promise<TRes>) | ((p: T[]) => TRes | P
 // Shorthand for return type of pipe (only replace return value of Delta function)
 // see https://stackoverflow.com/a/50014868
 type ArgumentTypes<T> = T extends (...args: infer U) => infer R ? U : never;
-type RetunType<T> = T extends (...args: infer U) => infer R ? R : never;
 type ReplaceReturnTypePromise<T, TNewReturn> = (...a: ArgumentTypes<T>) => Promise<TNewReturn>;
+type VariadicFunction = (...args: any[]) => any;
 // Pipe (0-5 functions, first Delta)
 function pipe<T>(): (arg: T) => Promise<T>;
-function pipe<Delta extends (...args: any[]) => any>(df: Delta): Delta;
-function pipe<Delta extends (...args: any[]) => any, R1>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>):
+function pipe<Delta extends VariadicFunction>(df: Delta): Delta;
+function pipe<Delta extends VariadicFunction, R1>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>):
     ReplaceReturnTypePromise<Delta, R1>;
-function pipe<Delta extends (...args: any[]) => any, R1, R2>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>, r2: RiverFn<R1, R2>):
+function pipe<Delta extends VariadicFunction, R1, R2>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>, r2: RiverFn<R1, R2>):
     ReplaceReturnTypePromise<Delta, R2>;
-function pipe<Delta extends (...args: any[]) => any, R1, R2, R3>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>, r2: RiverFn<R1, R2>, r3: RiverFn<R2, R3>):
+function pipe<Delta extends VariadicFunction, R1, R2, R3>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>, r2: RiverFn<R1, R2>, r3: RiverFn<R2, R3>):
     ReplaceReturnTypePromise<Delta, R3>;
-function pipe<Delta extends (...args: any[]) => any, R1, R2, R3, R4>(
+function pipe<Delta extends VariadicFunction, R1, R2, R3, R4>(
     df: Delta,
     r1: RiverFn<ReturnType<Delta>, R1>,
     r2: RiverFn<R1, R2>,
     r3: RiverFn<R2, R3>,
     r4: RiverFn<R3, R4>
 ): ReplaceReturnTypePromise<Delta, R4>;
-function pipe<Delta extends (...args: any[]) => any, R1, R2, R3, R4, R5>(
+function pipe<Delta extends VariadicFunction, R1, R2, R3, R4, R5>(
     df: Delta,
     r1: RiverFn<ReturnType<Delta>, R1>,
     r2: RiverFn<R1, R2>,
@@ -30,7 +30,7 @@ function pipe<Delta extends (...args: any[]) => any, R1, R2, R3, R4, R5>(
     r4: RiverFn<R3, R4>,
     r5: RiverFn<R4, R5>
 ): ReplaceReturnTypePromise<Delta, R5>;
-function pipe<Delta extends (...args: any[]) => any, Res>(df: Delta, ...fns: any[]):
+function pipe<Delta extends VariadicFunction, Res>(df: Delta, ...fns: any[]):
     ReplaceReturnTypePromise<Delta, any>;
 
 /**
