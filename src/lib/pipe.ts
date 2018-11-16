@@ -1,14 +1,7 @@
-type ArgTypes<T> = T extends (...args: infer A) => any ? A : never;
-type ArgType<F, Else= never> = F extends (arg: infer A) => any ? A : Else;
-type ReplaceReturnTypePromise<T, TNewReturn> = (...a: ArgTypes<T>) => Promise<TNewReturn>;
-type VariadicFunction = (...args: any[]) => any;
-type Lookup<T, K, Default= never> = K extends keyof T ? T[K] : Default;
-type Tail<T extends any[]> = T extends [any, ...Array<infer U>] ? U[] : never;
+import { ArgType, LastIndexOf, Lookup, ReplaceReturnTypePromise, Tail, VariadicFunction } from './internal/metaTypes';
+
 type RiverFn = (arg: any) => any;
 type AsChain<F extends [RiverFn, ...RiverFn[]], G extends RiverFn[]= Tail<F>> = { [K in keyof F]: (arg: ArgType<F[K]>) => ArgType<Lookup<G, K, any>, any> };
-type LastIndexOf<T extends any[]> =
-  ((...x: T) => void) extends ((y: any, ...z: infer U) => void)
-  ? U['length'] : never;
 function pipe<T>(): (arg: T) => Promise<T>;
 function pipe<Delta extends VariadicFunction>(df: Delta): Delta;
 function pipe<Delta extends VariadicFunction, F extends [(arg: ReturnType<Delta>) => any, ...Array<(arg: any) => any>]>(df: Delta, ...rivers: F & AsChain<F>):
