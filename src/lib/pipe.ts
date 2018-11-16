@@ -1,37 +1,22 @@
-// River function -- other functions in composition flow: one input, one output
-type RiverFn<T, TRes> = ((p: T) => TRes | Promise<TRes>) | ((p: T[]) => TRes | Promise<TRes>);
-
 // Shorthand for return type of pipe (only replace return value of Delta function)
 // see https://stackoverflow.com/a/50014868
 type ArgumentTypes<T> = T extends (...args: infer U) => infer R ? U : never;
 type ReplaceReturnTypePromise<T, TNewReturn> = (...a: ArgumentTypes<T>) => Promise<TNewReturn>;
 type VariadicFunction = (...args: any[]) => any;
-// Pipe (0-5 functions, first Delta)
+type Lookup<T, K extends keyof any, Else= never> = K extends keyof T ? T[K] : Else;
+type Tail<T extends any[]> = ((...t: T) => void) extends ((x: any, ...u: infer U) => void) ? U : never;
+type Func1 = (arg: any) => any;
+type ArgType<F, Else= never> = F extends (arg: infer A) => any ? A : Else;
+type AsChain<F extends [Func1, ...Func1[]], G extends Func1[]= Tail<F>> = { [K in keyof F]: (arg: ArgType<F[K]>) => ArgType<Lookup<G, K, any>, any> };
+type LastIndexOf<T extends any[]> =
+  ((...x: T) => void) extends ((y: any, ...z: infer U) => void)
+  ? U['length'] : never;
+
+
 function pipe<T>(): (arg: T) => Promise<T>;
 function pipe<Delta extends VariadicFunction>(df: Delta): Delta;
-function pipe<Delta extends VariadicFunction, R1>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>):
-    ReplaceReturnTypePromise<Delta, R1>;
-function pipe<Delta extends VariadicFunction, R1, R2>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>, r2: RiverFn<R1, R2>):
-    ReplaceReturnTypePromise<Delta, R2>;
-function pipe<Delta extends VariadicFunction, R1, R2, R3>(df: Delta, r1: RiverFn<ReturnType<Delta>, R1>, r2: RiverFn<R1, R2>, r3: RiverFn<R2, R3>):
-    ReplaceReturnTypePromise<Delta, R3>;
-function pipe<Delta extends VariadicFunction, R1, R2, R3, R4>(
-    df: Delta,
-    r1: RiverFn<ReturnType<Delta>, R1>,
-    r2: RiverFn<R1, R2>,
-    r3: RiverFn<R2, R3>,
-    r4: RiverFn<R3, R4>
-): ReplaceReturnTypePromise<Delta, R4>;
-function pipe<Delta extends VariadicFunction, R1, R2, R3, R4, R5>(
-    df: Delta,
-    r1: RiverFn<ReturnType<Delta>, R1>,
-    r2: RiverFn<R1, R2>,
-    r3: RiverFn<R2, R3>,
-    r4: RiverFn<R3, R4>,
-    r5: RiverFn<R4, R5>
-): ReplaceReturnTypePromise<Delta, R5>;
-function pipe<Delta extends VariadicFunction, Res>(df: Delta, ...fns: any[]):
-    ReplaceReturnTypePromise<Delta, any>;
+function pipe<Delta extends VariadicFunction, F extends [(arg: ReturnType<Delta>) => any, ...Array<(arg: any) => any>]>(df: Delta, ...rivers: F & AsChain<F>):
+    ReplaceReturnTypePromise<Delta, ReturnType<F[LastIndexOf<F>]>>;
 
 /**
  * Create a function composed of provided functions in left-to-right execution chain.
