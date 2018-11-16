@@ -3,7 +3,7 @@ type ArgType<F, Else= never> = F extends (arg: infer A) => any ? A : Else;
 type ReplaceReturnTypePromise<T, TNewReturn> = (...a: ArgTypes<T>) => Promise<TNewReturn>;
 type VariadicFunction = (...args: any[]) => any;
 type Lookup<T, K extends keyof any, Else= never> = K extends keyof T ? T[K] : Else;
-type Tail<T extends any[]> = ((...t: T) => void) extends ((x: any, ...u: infer U) => void) ? U : never;
+type Tail<T extends any[]> = T extends [any, ...Array<infer U>] ? U[] : never;
 type RiverFn = (arg: any) => any;
 type AsChain<F extends [RiverFn, ...RiverFn[]], G extends RiverFn[]= Tail<F>> = { [K in keyof F]: (arg: ArgType<F[K]>) => ArgType<Lookup<G, K, any>, any> };
 type LastIndexOf<T extends any[]> =
