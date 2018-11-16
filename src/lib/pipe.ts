@@ -1,10 +1,14 @@
-import { ArgType, LastIndexOf, Lookup, ReplaceReturnTypePromise, Tail, VariadicFunction } from './internal/metaTypes';
-
+import { ArgType, LastIndexOf, Lookup, ReplaceReturnTypePromise, Tail, UnpackPromise, VariadicFunction } from './internal/metaTypes';
 type RiverFn = (arg: any) => any;
-type AsChain<F extends [RiverFn, ...RiverFn[]], G extends RiverFn[]= Tail<F>> = { [K in keyof F]: (arg: ArgType<F[K]>) => ArgType<Lookup<G, K, any>, any> };
+type AsChain<F extends [RiverFn, ...RiverFn[]], G extends RiverFn[]= Tail<F>> = {
+    [K in keyof F]: (arg: UnpackPromise<ArgType<F[K]>>) => ArgType<Lookup<G, K, any>, any>
+};
 function pipe<T>(): (arg: T) => Promise<T>;
 function pipe<Delta extends VariadicFunction>(df: Delta): Delta;
-function pipe<Delta extends VariadicFunction, F extends [(arg: ReturnType<Delta>) => any, ...Array<(arg: any) => any>]>(df: Delta, ...rivers: F & AsChain<F>):
+function pipe<
+    Delta extends VariadicFunction,
+    F extends [(arg: UnpackPromise<ReturnType<Delta>>) => any, ...Array<(arg: any) => any>]
+>(df: Delta, ...rivers: F & AsChain<F>):
     ReplaceReturnTypePromise<Delta, ReturnType<F[LastIndexOf<F>]>>;
 
 /**
