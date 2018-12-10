@@ -1,4 +1,4 @@
-import pipe, { DeltaFn0 } from 'lib/pipe';
+import pipe from 'lib/pipe';
 
 const always = <T>(x: T) => () => x;
 const alwaysP = <T>(x: T) => () => Promise.resolve(x);
@@ -47,7 +47,7 @@ describe('pipe', () => {
             sumVar,
         );
         await expect(deltaSum(4, 3)).resolves.toEqual(42);
-        await expect(inverseDeltaSum(4, 3)).resolves.toEqual(24);
+        await expect(inverseDeltaSum(4)).resolves.toEqual(24);
     });
     test('Typings correct', async () => {
         const parseNumbers = (a: string, b: string): number[] => [Number(a), Number(b)];

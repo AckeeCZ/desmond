@@ -6,7 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- pipe to readme
+- Pipe to readme
+
+### Changed
+- Pipe can now handle any number of provided functions, validating the chain of arguments, without explicit enumeration
 
 ## [0.3.0] - 2018-11-14
 ### Added
