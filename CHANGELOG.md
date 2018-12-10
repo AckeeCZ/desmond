@@ -5,10 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Added
-- pipe to readme
 ### Removed
 - create createDateWithMinutesFromNow
+
+## [0.4.0] - 2018-12-10
+### Added
+- Pipe to readme
+
+### Changed
+- Pipe can now handle any number of provided functions, validating the chain of arguments, without explicit enumeration
 
 ## [0.3.0] - 2018-11-14
 ### Added
@@ -93,7 +98,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `conf.json`
 - `jsconfig.json`
 
-[Unreleased]: https://github.com/AckeeCZ/desmond/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/AckeeCZ/desmond/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/AckeeCZ/desmond/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/AckeeCZ/desmond/compare/v0.2.5...v0.3.0
 [0.2.5]: https://github.com/AckeeCZ/desmond/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/AckeeCZ/desmond/compare/v0.2.3...v0.2.4
