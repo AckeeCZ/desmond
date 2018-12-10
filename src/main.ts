@@ -1,6 +1,5 @@
 export { default as absoluteUrl } from './lib/absoluteUrl';
 export { default as compareBcrypt } from './lib/compareBcrypt';
-export { default as createDateWithMinutesFromNow } from './lib/createDateWithMinutesFromNow';
 export { default as createHash } from './lib/createHash';
 export { default as encodeBcrypt } from './lib/encodeBcrypt';
 export { default as fullUrlFromReq } from './lib/fullUrlFromReq';
