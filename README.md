@@ -29,21 +29,16 @@ To see what functions and tools are available, see the next section.
 
 ### Express
  - [`absoluteUrl`](https://ackeecz.github.io/desmond/globals.html#absoluteurl)
- - ~~`fullUrlFromReq`~~ deprecated alias for `absoluteUrl`
 
 ### Hashing
  - [`compareBcrypt`](https://ackeecz.github.io/desmond/globals.html#comparebcrypt)
- - ~~`createHash`~~ deprecated alias for `hash`
- - ~~`encodeBcrypt`~~ deprecated alias for `hashBcrypt`
  - [`hashBcrypt`](https://ackeecz.github.io/desmond/globals.html#hashbcrypt)
  - [`hash`](https://ackeecz.github.io/desmond/globals.html#hash)
 
 ### Database
  - [`snakelize`](https://ackeecz.github.io/desmond/globals.html#snakelize)
  - [`toJson`](https://ackeecz.github.io/desmond/globals.html#tojson)
- - ~~`nullOrToJSON`~~ deprecated alias for `toJson`
  - [`tableColumns`](https://ackeecz.github.io/desmond/globals.html#tablecolumns)
- - ~~`sqlColumnsListPromise`~~ deprecated alias for `tableColumns`
  - [`transacted`](https://ackeecz.github.io/desmond/globals.html#transacted)
 
 ### Promises
@@ -55,7 +50,6 @@ To see what functions and tools are available, see the next section.
 ### Other
  - [`Microservice`](https://ackeecz.github.io/desmond/classes/microservice.html)
  - [`parseBool`](https://ackeecz.github.io/desmond/globals.html#parsebool)
- - ~~`toBoolean`~~ deprecated alias for `parseBool`
  - [`generateRandomAlphanumeric`](https://ackeecz.github.io/desmond/globals.html#generaterandomalphanumeric)
 
 ## Development
