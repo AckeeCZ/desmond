@@ -1,0 +1,5 @@
+{
+    "hooks": {
+        "pre-commit": "npm test -- --ci && pretty-quick --staged && npm run lint -- --fix"
+    }
+}
