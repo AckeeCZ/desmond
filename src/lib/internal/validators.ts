@@ -1,13 +1,8 @@
-/**
- * @ignore
- */
-const isFunction = (fn: any) => typeof fn === 'function';
-/**
- * @ignore
- */
-const isString = (x: any) => typeof x === 'string';
+/** @ignore */
+export const isFunction = (fn: any) => typeof fn === 'function';
 
-export {
-    isFunction,
-    isString
-};
+/** @ignore */
+export const isString = (x: any) => typeof x === 'string';
+
+/** @ignore */
+export const isObject = (x: any) => typeof x === 'object';
