@@ -8,17 +8,17 @@ describe('createHash', () => {
             expect(typeof hash(data)).toBe('string');
         });
         test('Returns null on null', () => {
-            expect(hash(null as any as string)).toBe(null);
+            expect(hash((null as any) as string)).toBe(null);
         });
         test('Throws error on non-existent hash', () => {
             const algo = 'ThisHashAlgoHopefullyDoesNotExist';
             expect(() => hash(data, algo)).toThrow();
         });
         test('Returns buffer on null encoding', () => {
-            expect(hash(data, 'sha1', null as any as HexBase64Latin1Encoding)).toBeInstanceOf(Buffer);
+            expect(hash(data, 'sha1', (null as any) as HexBase64Latin1Encoding)).toBeInstanceOf(Buffer);
         });
         test('Returns buffer on invalid encoding', () => {
-            const encoding = 'NorThisDigestEncoding' as any as HexBase64Latin1Encoding;
+            const encoding = ('NorThisDigestEncoding' as any) as HexBase64Latin1Encoding;
             expect(hash(data, 'sha1', encoding)).toBeInstanceOf(Buffer);
         });
     });

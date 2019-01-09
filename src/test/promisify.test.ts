@@ -1,7 +1,8 @@
 import promisify, { Callback } from 'lib/promisify';
 
 const cbSimple = (ret: number, cb: Callback<number>) => cb(null, ret);
-const cbElab = (a: any, err: string, ret: string, fail: boolean, cb: Callback<string>) => fail ? cb(err) : cb(null, ret);
+const cbElab = (a: any, err: string, ret: string, fail: boolean, cb: Callback<string>) =>
+    fail ? cb(err) : cb(null, ret);
 
 describe('promisify', () => {
     test('One param resolve', async () => {

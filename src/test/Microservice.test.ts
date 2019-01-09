@@ -2,24 +2,22 @@ import Microservice from 'lib/Microservice';
 import nock from 'nock';
 import { StatusCodeError } from 'request-promise/errors';
 
-
 const URL = 'http://www.microservice.com';
 
 let infoLogs: any[] = [];
 let errorLogs: any[] = [];
 
 const logger = {
-    error: ((x: any) => (errorLogs = errorLogs.concat(x))),
-    info: ((x: any) => (infoLogs = infoLogs.concat(x))),
+    error: (x: any) => (errorLogs = errorLogs.concat(x)),
+    info: (x: any) => (infoLogs = infoLogs.concat(x)),
 };
-
 
 const service = new Microservice(
     URL,
     {
         json: true,
     },
-    logger,
+    logger
 );
 /* tslint:disable:max-classes-per-file */
 describe('Microservice', () => {
@@ -101,17 +99,20 @@ describe('Microservice', () => {
             u: 'updated item',
         };
         test('Matches status code and body', async () => {
-            nock(URL).post('/').reply(200, body.c);
-            nock(URL).get('/').reply(200, body.r);
-            nock(URL).put('/').reply(200, body.u);
-            nock(URL).delete('/').reply(200, body.d);
+            nock(URL)
+                .post('/')
+                .reply(200, body.c);
+            nock(URL)
+                .get('/')
+                .reply(200, body.r);
+            nock(URL)
+                .put('/')
+                .reply(200, body.u);
+            nock(URL)
+                .delete('/')
+                .reply(200, body.d);
 
-            const responses = await Promise.all([
-                crudService.c(),
-                crudService.r(),
-                crudService.u(),
-                crudService.d(),
-            ]);
+            const responses = await Promise.all([crudService.c(), crudService.r(), crudService.u(), crudService.d()]);
             expect(responses.map(r => r.body)).toEqual([body.c, body.r, body.u, body.d]);
             expect(responses.every(r => r.statusCode === 200)).toBe(true);
         });
