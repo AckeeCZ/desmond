@@ -5,9 +5,11 @@ describe('randomAlfanumeric', () => {
         expect(generateRandomAlphanumeric(0)).toBe('');
     });
     test('Length matches', () => {
-        Array(32).fill(null).forEach((_, i) => {
-            expect(generateRandomAlphanumeric(i)).toHaveLength(i);
-        });
+        Array(32)
+            .fill(null)
+            .forEach((_, i) => {
+                expect(generateRandomAlphanumeric(i)).toHaveLength(i);
+            });
     });
     test('Large alfanum contains only alfanum', () => {
         const n = 512;

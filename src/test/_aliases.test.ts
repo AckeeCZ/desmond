@@ -6,14 +6,7 @@ import nullOrToJSON from 'lib/nullOrToJSON';
 import sqlColumnsListPromise from 'lib/sqlColumnsListPromise';
 import toBoolean from 'lib/toBoolean';
 
-const aliases = [
-    encodeBcrypt,
-    createHash,
-    fullUrlFromReq,
-    nullOrToJSON,
-    sqlColumnsListPromise,
-    toBoolean,
-];
+const aliases = [encodeBcrypt, createHash, fullUrlFromReq, nullOrToJSON, sqlColumnsListPromise, toBoolean];
 describe('Aliases', () => {
     test('Are a function', () => {
         aliases.forEach(a => {

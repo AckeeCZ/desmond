@@ -19,10 +19,12 @@ function snakelize(object: { [key: string]: any }): { [key: string]: any };
 function snakelize(array: Array<{ [key: string]: any }>): Array<{ [key: string]: any }>;
 function snakelize(input: any) {
     if (isString(input)) {
-        return input.split('.').map(snakeCase).join('.');
+        return input
+            .split('.')
+            .map(snakeCase)
+            .join('.');
     }
     return Array.isArray(input) ? input.map(o => mapKeys(o, snakelize)) : mapKeys(input, snakelize);
 }
-
 
 export default snakelize;

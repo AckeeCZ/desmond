@@ -8,12 +8,9 @@ const defaultAttributes = {
     transaction: (fn: TransactionFunction) => fn(null),
 };
 const createKnexMock = (attributes: { [k: string]: any }, knexFn = getTable): Knex =>
-    Object.assign(
-        knexFn,
-        {
-            ...defaultAttributes,
-            ...attributes,
-        }
-    );
+    Object.assign(knexFn, {
+        ...defaultAttributes,
+        ...attributes,
+    });
 
 export default createKnexMock;

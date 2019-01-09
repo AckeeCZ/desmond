@@ -20,21 +20,16 @@ describe('pipe', () => {
         const count = pipe(
             alwaysConcatP('ein'),
             alwaysConcat('zwo'),
-            alwaysConcatP('drei'),
+            alwaysConcatP('drei')
         );
         await expect(count()).resolves.toEqual(['ein', 'zwo', 'drei']);
     });
     test('Resolves values of array', async () => {
         const bratSum = pipe(
-            always([
-                Promise.resolve(7),
-                14,
-                21,
-            ]),
+            always([Promise.resolve(7), 14, 21]),
             sumArr
         );
         await expect(bratSum()).resolves.toEqual(42);
-
     });
     test('First function accepts recieves multiple arguments', async () => {
         const deltaSum = pipe(
@@ -43,7 +38,7 @@ describe('pipe', () => {
         );
         const inverseDeltaSum = pipe(
             multiply(6),
-            sumVar,
+            sumVar
         );
         await expect(deltaSum(4, 3)).resolves.toEqual(42);
         await expect(inverseDeltaSum(4)).resolves.toEqual(24);
@@ -52,13 +47,27 @@ describe('pipe', () => {
         const parseNumbers = (a: string, b: string): number[] => [Number(a), Number(b)];
         const addTwo = ([a, b]: number[]) => a + b;
         const isLarge = (x: number) => x > 3;
-        const process: (a: string, b: string) => Promise<boolean> = pipe(parseNumbers, addTwo, isLarge);
+        const process: (a: string, b: string) => Promise<boolean> = pipe(
+            parseNumbers,
+            addTwo,
+            isLarge
+        );
         const res: boolean = await process('5', '1');
 
         expect(res).toEqual(true);
     });
     test('Typings take out-of-bounds list of functions', async () => {
-        const longPipe = pipe(always(1), always(1), always(1), always(1), always(1), always(1), always(1), always(1), always(1));
+        const longPipe = pipe(
+            always(1),
+            always(1),
+            always(1),
+            always(1),
+            always(1),
+            always(1),
+            always(1),
+            always(1),
+            always(1)
+        );
         await expect(longPipe()).resolves.toEqual(1);
     });
 });

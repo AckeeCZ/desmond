@@ -1,6 +1,14 @@
-import { ArgType, LastIndexOf, Lookup, ReplaceReturnTypePromise, Tail, UnpackPromise, VariadicFunction } from './internal/metaTypes';
+import {
+    ArgType,
+    LastIndexOf,
+    Lookup,
+    ReplaceReturnTypePromise,
+    Tail,
+    UnpackPromise,
+    VariadicFunction,
+} from './internal/metaTypes';
 type RiverFn = (arg: any) => any;
-type AsChain<F extends [RiverFn, ...RiverFn[]], G extends RiverFn[]= Tail<F>> = {
+type AsChain<F extends [RiverFn, ...RiverFn[]], G extends RiverFn[] = Tail<F>> = {
     [K in keyof F]: (arg: UnpackPromise<ArgType<F[K]>>) => ArgType<Lookup<G, K, any>, any>
 };
 function pipe<T>(): (arg: T) => Promise<T>;
@@ -8,8 +16,7 @@ function pipe<Delta extends VariadicFunction>(df: Delta): Delta;
 function pipe<
     Delta extends VariadicFunction,
     F extends [(arg: UnpackPromise<ReturnType<Delta>>) => any, ...Array<(arg: any) => any>]
->(df: Delta, ...rivers: F & AsChain<F>):
-    ReplaceReturnTypePromise<Delta, ReturnType<F[LastIndexOf<F>]>>;
+>(df: Delta, ...rivers: F & AsChain<F>): ReplaceReturnTypePromise<Delta, ReturnType<F[LastIndexOf<F>]>>;
 
 /**
  * Create a function composed of provided functions in left-to-right execution chain.
@@ -46,11 +53,15 @@ function pipe<
  */
 function pipe(...fns: any[]): any {
     return (...initialArgs: any[]) =>
-        fns.reduce((pendingLastResult, fn, i) => pendingLastResult.then((lastResult: any) => {
-            // first iteration (lastResult is initialArgs), spread into delta function
-            const currentResult = i === 0 ? fn(...lastResult) : fn(lastResult);
-            return Array.isArray(currentResult) ? Promise.all(currentResult) : currentResult;
-        }), Promise.all(initialArgs));
+        fns.reduce(
+            (pendingLastResult, fn, i) =>
+                pendingLastResult.then((lastResult: any) => {
+                    // first iteration (lastResult is initialArgs), spread into delta function
+                    const currentResult = i === 0 ? fn(...lastResult) : fn(lastResult);
+                    return Array.isArray(currentResult) ? Promise.all(currentResult) : currentResult;
+                }),
+            Promise.all(initialArgs)
+        );
 }
 
 export default pipe;

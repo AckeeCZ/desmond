@@ -1,6 +1,5 @@
 import { isFunction } from './internal/validators';
 
-
 export interface Request {
     protocol: string;
     originalUrl: string;
@@ -17,6 +16,6 @@ const valid = (req: Request) => req && req.protocol && req.originalUrl && isFunc
  * @param req express request
  * @return absolute url
  */
-const absoluteUrl = (req: Request) => valid(req) ? `${req.protocol}://${req.get('host')}${req.originalUrl}` : null;
+const absoluteUrl = (req: Request) => (valid(req) ? `${req.protocol}://${req.get('host')}${req.originalUrl}` : null);
 
 export default absoluteUrl;

@@ -10,10 +10,10 @@ interface KnexParams {
  * is created using `knex.transaction`.
  */
 const transacted = (knex: Knex, params: KnexParams): TransactionFunction => fn => {
-        if (params && params.transacting) {
-            return fn(params.transacting);
-        }
-        return knex.transaction(t => fn(t));
-    };
+    if (params && params.transacting) {
+        return fn(params.transacting);
+    }
+    return knex.transaction(t => fn(t));
+};
 
 export default transacted;

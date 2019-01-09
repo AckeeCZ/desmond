@@ -49,6 +49,8 @@
     "jest": "^23.6.0",
     "nock": "^10.0.1",
     "npm-check": "^5.8.0",
+    "prettier": "^1.15.3",
+    "prettier-config-ackee": "0.0.11",
     "ts-jest": "^23.10.4",
     "tslint-config-ackee": "^0.2.2",
     "typedoc": "^0.13.0",
