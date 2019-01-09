@@ -7,7 +7,4 @@ const isFunction = (fn: any) => typeof fn === 'function';
  */
 const isString = (x: any) => typeof x === 'string';
 
-export {
-    isFunction,
-    isString
-};
+export { isFunction, isString };

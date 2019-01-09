@@ -1,8 +1,15 @@
 import tap from 'lib/tap';
 
 let last: any;
-const discardTee = (val: any) => {last = val; return null; };
-const discardTeeP = (val: any) => Promise.resolve().then(() => {last = val; return null; });
+const discardTee = (val: any) => {
+    last = val;
+    return null;
+};
+const discardTeeP = (val: any) =>
+    Promise.resolve().then(() => {
+        last = val;
+        return null;
+    });
 
 describe('tap', () => {
     beforeEach(() => {
