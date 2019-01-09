@@ -39,6 +39,7 @@ To see what functions and tools are available, see the next section.
  - [`hash`](https://ackeecz.github.io/desmond/globals.html#hash)
 
 ### Database
+ - [`attributes`](https://ackeecz.github.io/desmond/globals.html#attributes)
  - [`snakelize`](https://ackeecz.github.io/desmond/globals.html#snakelize)
  - [`toJson`](https://ackeecz.github.io/desmond/globals.html#tojson)
  - ~~`nullOrToJSON`~~ deprecated alias for `toJson`

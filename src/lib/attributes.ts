@@ -2,7 +2,14 @@ import isEmpty from 'lodash.isempty';
 import { isObject } from './internal/validators';
 import parseBool from './parseBool';
 
-export default (input: any, params: {
+/**
+ * Transform entity attributes, as you fetch them from your storage
+ *
+ * 1. Null parse JSON collumns
+ * 2. Put null instead of empty strings or objects
+ * 3. Parse to booleans (e.g. SMALL_INT)
+ */
+const attributes = (input: any, params: {
     jsonColumns?: string[];
     toBoolean?: string[];
     nullOnEmpty?: '*' | string[];
@@ -32,3 +39,5 @@ export default (input: any, params: {
 
     return input;
 };
+
+export default attributes;
