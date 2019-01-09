@@ -1,7 +1,6 @@
 import pipe from 'lib/pipe';
 
 const always = <T>(x: T) => () => x;
-const alwaysP = <T>(x: T) => () => Promise.resolve(x);
 const alwaysConcat = <T>(x: T) => (chain: T[] = []) => [...chain, x];
 const alwaysConcatP = <T>(x: T) => (chain: T[] = []) => Promise.resolve([...chain, x]);
 const sumArr = <T>(arr: T[]) => arr.reduce((a: number, b: T) => a + Number(b), 0);
