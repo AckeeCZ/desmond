@@ -1,4 +1,4 @@
-import tableColumns from 'lib/tableColumns';
+import { tableColumns } from 'main';
 import createKnexMock from './mock/knex';
 
 const knex = createKnexMock({}, name => ({

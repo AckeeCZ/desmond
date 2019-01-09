@@ -1,6 +1,6 @@
 import { isFunction } from './internal/validators';
 
-export interface Request {
+interface Request {
     protocol: string;
     originalUrl: string;
     get: (param: string) => string;

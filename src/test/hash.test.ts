@@ -1,5 +1,5 @@
 import { HexBase64Latin1Encoding } from 'crypto';
-import hash from 'lib/hash';
+import { hash } from 'main';
 
 describe('createHash', () => {
     describe('Basic behavior', () => {

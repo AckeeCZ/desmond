@@ -1,4 +1,4 @@
-import toJson from 'lib/toJson';
+import { toJson } from 'main';
 
 let toJsonCounter = 0;
 let lastOptions: object;

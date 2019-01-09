@@ -1,4 +1,4 @@
-import absoluteUrl, { Request } from 'lib/absoluteUrl';
+import { absoluteUrl } from 'main';
 import * as url from 'url';
 
 const createRequest = (params: { [k: string]: any }) => ({
@@ -30,10 +30,10 @@ describe('absoluteUrl', () => {
         );
     });
     test('Returns null on null', () => {
-        expect(absoluteUrl((null as any) as Request)).toBe(null);
+        expect(absoluteUrl(null as any)).toBe(null);
     });
     test('Returns null on invalid request', () => {
         const mischievousRequest = { protocol: 'foo', get: () => 'x' };
-        expect(absoluteUrl((mischievousRequest as any) as Request)).toBe(null);
+        expect(absoluteUrl(mischievousRequest as any)).toBe(null);
     });
 });

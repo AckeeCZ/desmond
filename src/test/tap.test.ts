@@ -1,4 +1,4 @@
-import tap from 'lib/tap';
+import { tap } from 'main';
 
 let last: any;
 const discardTee = (val: any) => {
