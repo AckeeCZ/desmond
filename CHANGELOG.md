@@ -14,8 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make all tests use main exports
 - Use native types for knex and bookshelf
 
-## Fixed
+### Fixed
 - #15
+- #14
 
 ### Removed
 - createDateWithMinutesFromNow

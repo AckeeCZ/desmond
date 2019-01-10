@@ -1,6 +1,11 @@
 import { parseBool } from 'main';
 
 describe('parseBool', () => {
+    describe('Edge', () => {
+        test('Null is false', () => {
+            expect(parseBool(null)).toBe(false);
+        });
+    });
     describe('Numbers', () => {
         test('Valid non-zero numbers return true', () => {
             expect(parseBool(1)).toBe(true);
