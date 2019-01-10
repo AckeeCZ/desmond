@@ -1,8 +1,8 @@
 import * as Knex from 'knex';
 
-const table: Knex.QueryBuilder = {
-    columnInfo: () => Promise.resolve({}),
-} as any;
+const table: Pick<Knex.QueryBuilder, 'columnInfo'> = {
+    columnInfo: () => Promise.resolve({}) as any,
+};
 const getTable = (name: string) => table;
 const defaultAttributes = {
     transaction: (fn: (t: Knex.Transaction) => any) => fn(null as any),

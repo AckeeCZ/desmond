@@ -1,3 +1,4 @@
+import * as Knex from 'knex';
 // @ts-ignore
 import camelCase from 'lodash.camelcase';
 
@@ -6,9 +7,9 @@ import camelCase from 'lodash.camelcase';
  * @param knex Knex instance
  * @param table Table name
  */
-const tableColumns = (knex: any, table: string) =>
+const tableColumns = (knex: Knex, table: string) =>
     knex(table)
         .columnInfo()
-        .then((x: any) => Object.keys(x).map(camelCase));
+        .then((x: any) => Object.keys(x).map(camelCase)) as PromiseLike<string[]>;
 
 export default tableColumns;
