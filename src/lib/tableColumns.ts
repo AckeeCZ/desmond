@@ -1,5 +1,4 @@
 import * as Knex from 'knex';
-// @ts-ignore
 import camelCase from 'lodash.camelcase';
 
 /**
