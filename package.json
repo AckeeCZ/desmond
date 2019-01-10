@@ -32,6 +32,8 @@
     "check": "npm-check -i app -i errors -i config -i index & exit 0"
   },
   "dependencies": {
+    "@types/bookshelf": "^0.9.9",
+    "@types/knex": "^0.15.1",
     "@types/request-promise": "^4.1.42",
     "bcrypt": "^3.0.1",
     "lodash.camelcase": "^4.3.0",

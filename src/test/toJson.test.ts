@@ -1,15 +1,16 @@
+import { Model } from 'bookshelf';
 import { toJson } from 'main';
 
 let toJsonCounter = 0;
 let lastOptions: object;
-const jsonRes = { name: 'Jack' };
+const jsonRes: any = { name: 'Jack' };
 const entity = {
     toJSON: (options: object) => {
         toJsonCounter++;
         lastOptions = options;
         return jsonRes;
     },
-};
+} as Model<any>;
 
 describe('toJson', () => {
     beforeEach(() => {
@@ -41,7 +42,7 @@ describe('toJson', () => {
         const mischievousEntity = {
             toJSON: ('Not a function!' as any) as () => any,
         };
-        expect(toJson(mischievousEntity)).toBe(mischievousEntity);
+        expect(toJson(mischievousEntity as any)).toBe(mischievousEntity);
     });
 
     test('Argument pureness', () => {
@@ -59,7 +60,7 @@ describe('toJson', () => {
         };
         const optionsParam = { ...options };
         const complexEntityParam = { ...complexEntity };
-        expect(toJson(complexEntityParam, optionsParam)).toBe(complexJsonRes);
+        expect(toJson(complexEntityParam as any, optionsParam)).toBe(complexJsonRes);
         expect(optionsParam).toEqual(options);
         expect(complexEntityParam).toEqual(complexEntity);
     });

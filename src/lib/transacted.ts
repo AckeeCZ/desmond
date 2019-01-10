@@ -1,15 +1,11 @@
-import { Knex, Transaction, TransactionFunction } from './internal/types';
-
-interface KnexParams {
-    transacting?: Transaction;
-}
+import * as Knex from 'knex';
 
 /**
  * Create a function with parameter `Transaction`.
  * `Transaction` is either passed on from `params.transacting`, or new transaction
  * is created using `knex.transaction`.
  */
-const transacted = (knex: Knex, params: KnexParams): TransactionFunction => fn => {
+const transacted = (knex: Knex, params?: { transacting?: Knex.Transaction }) => (fn: (t: Knex.Transaction) => any) => {
     if (params && params.transacting) {
         return fn(params.transacting);
     }

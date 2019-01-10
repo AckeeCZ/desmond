@@ -1,4 +1,5 @@
-import { Model, Nullable } from './internal/types';
+import { Model } from 'bookshelf';
+import { Nullable } from './internal/types';
 import { isFunction } from './internal/validators';
 
 /**
@@ -8,7 +9,7 @@ import { isFunction } from './internal/validators';
  * @param options Object that is passed to toJSON method
  * @returns toJSON result
  */
-const toJson = (model: Nullable<Model>, options: object = {}) => {
+const toJson = (model: Nullable<Model<any>>, options: object = {}) => {
     if (model && model.toJSON && isFunction(model.toJSON)) {
         return model.toJSON(options);
     }
