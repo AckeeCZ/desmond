@@ -32,6 +32,8 @@
     "check": "npm-check -i app -i errors -i config -i index & exit 0"
   },
   "dependencies": {
+    "@types/bookshelf": "^0.9.9",
+    "@types/knex": "^0.15.1",
     "@types/request-promise": "^4.1.42",
     "bcrypt": "^3.0.1",
     "lodash.camelcase": "^4.3.0",
@@ -43,6 +45,7 @@
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/jest": "^23.3.5",
+    "@types/lodash.camelcase": "^4.3.4",
     "@types/lodash.defaultsdeep": "^4.6.4",
     "@types/lodash.isempty": "^4.4.4",
     "@types/lodash.snakecase": "^4.1.4",

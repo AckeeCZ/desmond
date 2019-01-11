@@ -1,4 +1,4 @@
-import parseBool from 'lib/parseBool';
+import { parseBool } from 'main';
 
 describe('parseBool', () => {
     describe('Edge', () => {

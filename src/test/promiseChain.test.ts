@@ -1,4 +1,4 @@
-import promiseChain from 'lib/promiseChain';
+import { promiseChain } from 'main';
 
 describe('promiseChain', () => {
     test('Promises', async () => {

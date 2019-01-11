@@ -1,5 +1,6 @@
-import promisify, { Callback } from 'lib/promisify';
+import { promisify } from 'main';
 
+type Callback<T> = (e: any, res?: T | undefined) => void;
 const cbSimple = (ret: number, cb: Callback<number>) => cb(null, ret);
 const cbElab = (a: any, err: string, ret: string, fail: boolean, cb: Callback<string>) =>
     fail ? cb(err) : cb(null, ret);

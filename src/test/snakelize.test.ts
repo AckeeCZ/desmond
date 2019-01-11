@@ -1,4 +1,4 @@
-import snakelize from 'lib/snakelize';
+import { snakelize } from 'main';
 
 describe('snakelize', () => {
     test('Snakelize string', () => {

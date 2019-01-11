@@ -11,12 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - upgraded tslint-config
+- Make all tests use main exports
+- Use native types for knex and bookshelf
 
 ### Fixed
+- #15
 - #14
 
 ### Removed
 - createDateWithMinutesFromNow
+- deprecated aliases fullUrlFromReq, createHash, encodeBcrypt, nullOrToJSON, sqlColumnsListPromise, toBoolean
 
 ## [0.4.0] - 2018-12-10
 ### Added

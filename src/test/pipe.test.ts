@@ -1,4 +1,4 @@
-import pipe from 'lib/pipe';
+import { pipe } from 'main';
 
 const always = <T>(x: T) => () => x;
 const alwaysConcat = <T>(x: T) => (chain: T[] = []) => [...chain, x];

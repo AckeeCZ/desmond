@@ -1,5 +1,4 @@
-import compareBcrpyt from 'lib/compareBcrypt';
-import hashBcrypt from 'lib/hashBcrypt';
+import { compareBcrypt, hashBcrypt } from 'main';
 
 describe('bcrypt', () => {
     test('Generates a string', () => {
@@ -10,7 +9,7 @@ describe('bcrypt', () => {
     test('Successful compare, custom salt round', async () => {
         const data = 'Two tiny timid toads trying to trot to Tarrytown.';
         const hashed = await hashBcrypt(data, 5);
-        await expect(compareBcrpyt(data, hashed)).resolves.toBe(true);
-        await expect(compareBcrpyt(hashed, 'foo')).resolves.toBe(false);
+        await expect(compareBcrypt(data, hashed)).resolves.toBe(true);
+        await expect(compareBcrypt(hashed, 'foo')).resolves.toBe(false);
     });
 });

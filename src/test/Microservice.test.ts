@@ -1,4 +1,4 @@
-import Microservice from 'lib/Microservice';
+import { Microservice } from 'main';
 import nock from 'nock';
 import { StatusCodeError } from 'request-promise/errors';
 

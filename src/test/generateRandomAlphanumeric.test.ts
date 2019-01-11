@@ -1,4 +1,4 @@
-import generateRandomAlphanumeric from 'lib/generateRandomAlphanumeric';
+import { generateRandomAlphanumeric } from 'main';
 
 describe('randomAlfanumeric', () => {
     test('Zero length', () => {

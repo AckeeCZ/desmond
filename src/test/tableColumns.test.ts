@@ -1,7 +1,7 @@
-import tableColumns from 'lib/tableColumns';
+import { tableColumns } from 'main';
 import createKnexMock from './mock/knex';
 
-const knex = createKnexMock({}, name => ({
+const knex = createKnexMock({}, (name: string) => ({
     columnInfo: () =>
         Promise.resolve({
             [name]: true,
@@ -12,7 +12,7 @@ const knex = createKnexMock({}, name => ({
 
 describe('tableColumns', () => {
     test('Camelcases all columns', async () => {
-        const got = tableColumns(knex, 'some_name').then(cols => cols.sort());
+        const got = tableColumns(knex, 'some_name').then((cols: any) => cols.sort());
         const expected = ['someName', 'fooBar', 'barBaz'].sort();
         await expect(got).resolves.toEqual(expected);
     });

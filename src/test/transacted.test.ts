@@ -1,13 +1,14 @@
-import { TransactionFunction } from 'lib/internal/types';
+import { Transaction } from 'knex';
+import * as Knex from 'knex';
 import { isFunction } from 'lib/internal/validators';
-import transacted from 'lib/transacted';
+import { transacted } from 'main';
 import createKnexMock from './mock/knex';
 
 let transactionsRan = 0;
-const transaction = 'T0';
+const transaction = ('T0' as any) as Transaction;
 let lastT: string | undefined;
 const knex = createKnexMock({
-    transaction: (fn: TransactionFunction) => {
+    transaction: (fn: (t: Knex.Transaction) => any) => {
         transactionsRan++;
         fn(transaction);
     },
@@ -34,7 +35,7 @@ describe('transacted', () => {
     });
     test('Existing transaction reused', () => {
         const options = {
-            transacting: 'T1',
+            transacting: ('T1' as any) as Transaction,
         };
         transacted(knex, options)(saveT);
         expect(lastT).toBe(options.transacting);
