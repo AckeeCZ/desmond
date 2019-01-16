@@ -1,22 +1,78 @@
-import {
-    ArgType,
-    LastIndexOf,
-    Lookup,
-    ReplaceReturnTypePromise,
-    Tail,
-    UnpackPromise,
-    VariadicFunction,
-} from './internal/metaTypes';
-type RiverFn = (arg: any) => any;
-type AsChain<F extends [RiverFn, ...RiverFn[]], G extends RiverFn[] = Tail<F>> = {
-    [K in keyof F]: (arg: UnpackPromise<ArgType<F[K]>>) => ArgType<Lookup<G, K, any>, any>
-};
-function pipe<T>(): (arg: T) => Promise<T>;
-function pipe<Delta extends VariadicFunction>(df: Delta): Delta;
-function pipe<
-    Delta extends VariadicFunction,
-    F extends [(arg: UnpackPromise<ReturnType<Delta>>) => any, ...Array<(arg: any) => any>]
->(df: Delta, ...rivers: F & AsChain<F>): ReplaceReturnTypePromise<Delta, ReturnType<F[LastIndexOf<F>]>>;
+import { UnpackPromise } from './internal/metaTypes';
+type DeltaFn<ARG extends any[], R> = (...args: UnpackPromise<ARG>) => R | PromiseLike<R>;
+type RiverFn<ARG, R> = (arg: UnpackPromise<ARG>) => R | PromiseLike<R>;
+function pipe<A extends any[]>(): (...args: A) => UnpackPromise<A>;
+function pipe<A extends any[], R1>(f1: DeltaFn<A, R1>): (...args: A) => Promise<R1>;
+function pipe<A extends any[], R1, R2>(f1: DeltaFn<A, R1>, f2: RiverFn<R1, R2>): (...args: A) => Promise<R2>;
+function pipe<A extends any[], R1, R2, R3>(
+    f1: DeltaFn<A, R1>,
+    f2: RiverFn<R1, R2>,
+    f3: RiverFn<R2, R3>
+): (...args: A) => Promise<R3>;
+function pipe<A extends any[], R1, R2, R3, R4>(
+    f1: DeltaFn<A, R1>,
+    f2: RiverFn<R1, R2>,
+    f3: RiverFn<R2, R3>,
+    f4: RiverFn<R3, R4>
+): (...args: A) => Promise<R4>;
+function pipe<A extends any[], R1, R2, R3, R4, R5>(
+    f1: DeltaFn<A, R1>,
+    f2: RiverFn<R1, R2>,
+    f3: RiverFn<R2, R3>,
+    f4: RiverFn<R3, R4>,
+    f5: RiverFn<R4, R5>
+): (...args: A) => Promise<R5>;
+function pipe<A extends any[], R1, R2, R3, R4, R5, R6>(
+    f1: DeltaFn<A, R1>,
+    f2: RiverFn<R1, R2>,
+    f3: RiverFn<R2, R3>,
+    f4: RiverFn<R3, R4>,
+    f5: RiverFn<R4, R5>,
+    f6: RiverFn<R5, R6>
+): (...args: A) => Promise<R6>;
+function pipe<A extends any[], R1, R2, R3, R4, R5, R6, R7>(
+    f1: DeltaFn<A, R1>,
+    f2: RiverFn<R1, R2>,
+    f3: RiverFn<R2, R3>,
+    f4: RiverFn<R3, R4>,
+    f5: RiverFn<R4, R5>,
+    f6: RiverFn<R5, R6>,
+    f7: RiverFn<R6, R7>
+): (...args: A) => Promise<R7>;
+function pipe<A extends any[], R1, R2, R3, R4, R5, R6, R7, R8>(
+    f1: DeltaFn<A, R1>,
+    f2: RiverFn<R1, R2>,
+    f3: RiverFn<R2, R3>,
+    f4: RiverFn<R3, R4>,
+    f5: RiverFn<R4, R5>,
+    f6: RiverFn<R5, R6>,
+    f7: RiverFn<R6, R7>,
+    f8: RiverFn<R7, R8>
+): (...args: A) => Promise<R8>;
+function pipe<A extends any[], R1, R2, R3, R4, R5, R6, R7, R8, R9>(
+    f1: DeltaFn<A, R1>,
+    f2: RiverFn<R1, R2>,
+    f3: RiverFn<R2, R3>,
+    f4: RiverFn<R3, R4>,
+    f5: RiverFn<R4, R5>,
+    f6: RiverFn<R5, R6>,
+    f7: RiverFn<R6, R7>,
+    f8: RiverFn<R7, R8>,
+    f9: RiverFn<R8, R9>
+): (...args: A) => Promise<R9>;
+function pipe<A extends any[], R1, R2, R3, R4, R5, R6, R7, R8, R9, R10>(
+    f1: DeltaFn<A, R1>,
+    f2: RiverFn<R1, R2>,
+    f3: RiverFn<R2, R3>,
+    f4: RiverFn<R3, R4>,
+    f5: RiverFn<R4, R5>,
+    f6: RiverFn<R5, R6>,
+    f7: RiverFn<R6, R7>,
+    f8: RiverFn<R7, R8>,
+    f9: RiverFn<R8, R9>,
+    f10: RiverFn<R9, R10>
+): (...args: A) => Promise<R10>;
+function pipe(deltaFn: DeltaFn<any, any>, ...riverFns: Array<RiverFn<any, any>>): (...args: any) => Promise<any>;
 
 /**
  * Create a function composed of provided functions in left-to-right execution chain.
