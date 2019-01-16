@@ -81,10 +81,10 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported"><a href="globals.html#aschain" class="tsd-kind-icon">As<wbr>Chain</a></li>
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#callback" class="tsd-kind-icon">Callback</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported"><a href="globals.html#deltafn" class="tsd-kind-icon">Delta<wbr>Fn</a></li>
 								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#nullable" class="tsd-kind-icon">Nullable</a></li>
-								<li class="tsd-kind-type-alias tsd-is-not-exported"><a href="globals.html#riverfn" class="tsd-kind-icon">River<wbr>Fn</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported"><a href="globals.html#riverfn" class="tsd-kind-icon">River<wbr>Fn</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -119,28 +119,13 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
-					<a name="aschain" class="tsd-anchor"></a>
-					<h3>As<wbr>Chain</h3>
-					<div class="tsd-signature tsd-kind-icon">As<wbr>Chain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/pipe.ts#L11">pipe.ts:11</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-						</ul>
-					</div>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
 					<a name="callback" class="tsd-anchor"></a>
 					<h3>Callback</h3>
 					<div class="tsd-signature tsd-kind-icon">Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/promisify.ts#L1">promisify.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/promisify.ts#L1">promisify.ts:1</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -168,23 +153,13 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-					<a name="nullable" class="tsd-anchor"></a>
-					<h3>Nullable</h3>
-					<div class="tsd-signature tsd-kind-icon">Nullable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+					<a name="deltafn" class="tsd-anchor"></a>
+					<h3>Delta<wbr>Fn</h3>
+					<div class="tsd-signature tsd-kind-icon">Delta<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/internal/types.ts#L1">internal/types.ts:1</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-is-not-exported">
-					<a name="riverfn" class="tsd-anchor"></a>
-					<h3>River<wbr>Fn</h3>
-					<div class="tsd-signature tsd-kind-icon">River<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/pipe.ts#L10">pipe.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L2">pipe.ts:2</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -192,17 +167,64 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UnpackPromise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ARG</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>arg: <span class="tsd-signature-type">any</span></h5>
+												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">UnpackPromise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ARG</span><span class="tsd-signature-symbol">&gt;</span></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">R</span>
+											<span class="tsd-signature-symbol"> | </span>
+											<span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span>
+										</h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="nullable" class="tsd-anchor"></a>
+					<h3>Nullable</h3>
+					<div class="tsd-signature tsd-kind-icon">Nullable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/internal/types.ts#L1">internal/types.ts:1</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+					<a name="riverfn" class="tsd-anchor"></a>
+					<h3>River<wbr>Fn</h3>
+					<div class="tsd-signature tsd-kind-icon">River<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L3">pipe.ts:3</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UnpackPromise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ARG</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>arg: <span class="tsd-signature-type">UnpackPromise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ARG</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">R</span>
+											<span class="tsd-signature-symbol"> | </span>
+											<span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span>
+										</h4>
 									</li>
 								</ul>
 							</li>
@@ -222,7 +244,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/absoluteUrl.ts#L19">absoluteUrl.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/absoluteUrl.ts#L19">absoluteUrl.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -259,7 +281,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/attributes.ts#L12">attributes.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/attributes.ts#L12">attributes.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -306,7 +328,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/compareBcrypt.ts#L3">compareBcrypt.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/compareBcrypt.ts#L3">compareBcrypt.ts:3</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -332,7 +354,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/generateRandomAlphanumeric.ts#L6">generateRandomAlphanumeric.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/generateRandomAlphanumeric.ts#L6">generateRandomAlphanumeric.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -360,7 +382,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/hash.ts#L8">hash.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/hash.ts#L8">hash.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -403,7 +425,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/hashBcrypt.ts#L3">hashBcrypt.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/hashBcrypt.ts#L3">hashBcrypt.ts:3</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -429,7 +451,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/parseBool.ts#L9">parseBool.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/parseBool.ts#L9">parseBool.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -451,15 +473,24 @@
 					<a name="pipe" class="tsd-anchor"></a>
 					<h3>pipe</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">pipe&lt;T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
-						<li class="tsd-signature tsd-kind-icon">pipe&lt;Delta&gt;<span class="tsd-signature-symbol">(</span>df<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Delta</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Delta</span></li>
-						<li class="tsd-signature tsd-kind-icon">pipe&lt;Delta, F&gt;<span class="tsd-signature-symbol">(</span>df<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Delta</span>, <span class="tsd-signature-symbol">...</span>rivers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol"> &amp; </span><a href="globals.html#aschain" class="tsd-signature-type">AsChain</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReplaceReturnTypePromise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Delta</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ReturnType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F[LastIndexOf&lt;F&gt;]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2, R3&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span>, f3<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2, R3, R4&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span>, f3<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span>, f4<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2, R3, R4, R5&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span>, f3<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span>, f4<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span>, f5<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2, R3, R4, R5, R6&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span>, f3<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span>, f4<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span>, f5<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span>, f6<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2, R3, R4, R5, R6, R7&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span>, f3<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span>, f4<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span>, f5<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span>, f6<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span>, f7<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2, R3, R4, R5, R6, R7, R8&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span>, f3<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span>, f4<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span>, f5<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span>, f6<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span>, f7<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span>, f8<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2, R3, R4, R5, R6, R7, R8, R9&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span>, f3<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span>, f4<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span>, f5<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span>, f6<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span>, f7<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span>, f8<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">&gt;</span>, f9<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R9</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe&lt;A, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10&gt;<span class="tsd-signature-symbol">(</span>f1<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span>, f2<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span>, f3<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span>, f4<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span>, f5<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span>, f6<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span>, f7<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span>, f8<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">&gt;</span>, f9<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R9</span><span class="tsd-signature-symbol">&gt;</span>, f10<span class="tsd-signature-symbol">: </span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R9</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R10</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">pipe<span class="tsd-signature-symbol">(</span>deltaFn<span class="tsd-signature-symbol">: </span><a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>riverFns<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/pipe.ts#L14">pipe.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L4">pipe.ts:4</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -493,7 +524,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
@@ -501,17 +532,17 @@
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter-siganture">
 									<ul class="tsd-signatures tsd-kind-type-literal">
-										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UnpackPromise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></li>
 									</ul>
 									<ul class="tsd-descriptions">
 										<li class="tsd-description">
 											<h4 class="tsd-parameters-title">Parameters</h4>
 											<ul class="tsd-parameters">
 												<li>
-													<h5>arg: <span class="tsd-signature-type">T</span></h5>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
 												</li>
 											</ul>
-											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">UnpackPromise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h4>
 										</li>
 									</ul>
 								</li>
@@ -520,7 +551,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/pipe.ts#L15">pipe.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L5">pipe.ts:5</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -554,22 +585,43 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Delta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">VariadicFunction</span></h4>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>df: <span class="tsd-signature-type">Delta</span></h5>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Delta</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
 							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/pipe.ts#L16">pipe.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L6">pipe.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -603,23 +655,932 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Delta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">VariadicFunction</span></h4>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 								</li>
 								<li>
-									<h4>F<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">]</span></h4>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>df: <span class="tsd-signature-type">Delta</span></h5>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>rivers: <span class="tsd-signature-type">F</span><span class="tsd-signature-symbol"> &amp; </span><a href="globals.html#aschain" class="tsd-signature-type">AsChain</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ReplaceReturnTypePromise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Delta</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ReturnType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">F[LastIndexOf&lt;F&gt;]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
 							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L7">pipe.ts:7</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
+								</li>
+								<li>
+									<h4>R3</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f3: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L12">pipe.ts:12</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
+								</li>
+								<li>
+									<h4>R3</h4>
+								</li>
+								<li>
+									<h4>R4</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f3: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f4: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L18">pipe.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
+								</li>
+								<li>
+									<h4>R3</h4>
+								</li>
+								<li>
+									<h4>R4</h4>
+								</li>
+								<li>
+									<h4>R5</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f3: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f4: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f5: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L25">pipe.ts:25</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
+								</li>
+								<li>
+									<h4>R3</h4>
+								</li>
+								<li>
+									<h4>R4</h4>
+								</li>
+								<li>
+									<h4>R5</h4>
+								</li>
+								<li>
+									<h4>R6</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f3: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f4: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f5: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f6: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L33">pipe.ts:33</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
+								</li>
+								<li>
+									<h4>R3</h4>
+								</li>
+								<li>
+									<h4>R4</h4>
+								</li>
+								<li>
+									<h4>R5</h4>
+								</li>
+								<li>
+									<h4>R6</h4>
+								</li>
+								<li>
+									<h4>R7</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f3: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f4: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f5: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f6: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f7: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L42">pipe.ts:42</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
+								</li>
+								<li>
+									<h4>R3</h4>
+								</li>
+								<li>
+									<h4>R4</h4>
+								</li>
+								<li>
+									<h4>R5</h4>
+								</li>
+								<li>
+									<h4>R6</h4>
+								</li>
+								<li>
+									<h4>R7</h4>
+								</li>
+								<li>
+									<h4>R8</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f3: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f4: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f5: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f6: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f7: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f8: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L52">pipe.ts:52</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
+								</li>
+								<li>
+									<h4>R3</h4>
+								</li>
+								<li>
+									<h4>R4</h4>
+								</li>
+								<li>
+									<h4>R5</h4>
+								</li>
+								<li>
+									<h4>R6</h4>
+								</li>
+								<li>
+									<h4>R7</h4>
+								</li>
+								<li>
+									<h4>R8</h4>
+								</li>
+								<li>
+									<h4>R9</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f3: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f4: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f5: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f6: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f7: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f8: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f9: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R9</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R9</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R9</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L63">pipe.ts:63</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>R1</h4>
+								</li>
+								<li>
+									<h4>R2</h4>
+								</li>
+								<li>
+									<h4>R3</h4>
+								</li>
+								<li>
+									<h4>R4</h4>
+								</li>
+								<li>
+									<h4>R5</h4>
+								</li>
+								<li>
+									<h4>R6</h4>
+								</li>
+								<li>
+									<h4>R7</h4>
+								</li>
+								<li>
+									<h4>R8</h4>
+								</li>
+								<li>
+									<h4>R9</h4>
+								</li>
+								<li>
+									<h4>R10</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>f1: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f2: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R1</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f3: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f4: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R3</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f5: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R4</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f6: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R5</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f7: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R6</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f8: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R7</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f9: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R8</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R9</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>f10: <a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R9</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R10</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R10</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R10</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/pipe.ts#L75">pipe.ts:75</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a function composed of provided functions in left-to-right execution chain.
+										Resulting function arguments are identical to the arguments of the first function
+									and return value identical to the result value of the last function in the chain.</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">const</span> myPipe = pipe(
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'first '</span>,
+    <span class="hljs-function">(<span class="hljs-params">x: <span class="hljs-built_in">string</span></span>) =&gt;</span> x + <span class="hljs-string">'second'</span>,
+);
+<span class="hljs-keyword">await</span> myPipe(<span class="hljs-string">'Called: '</span>) <span class="hljs-comment">// 'Called: first second'</span></code></pre>
+									<p>First function can have multiple arguments:</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-function">(<span class="hljs-params">a: <span class="hljs-built_in">number</span>, b: <span class="hljs-built_in">number</span></span>) =&gt;</span> a + b,
+    <span class="hljs-built_in">String</span>,
+)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// '3'</span></code></pre>
+									<p>In-between the steps, all result promises are resolved. If result is an array, elements are resolved via Promise.all</p>
+									<pre><code class="language-typescript"><span class="hljs-keyword">await</span> pipe(
+    <span class="hljs-comment">// first function has 0 args, resulting pipe has 0 args</span>
+    <span class="hljs-comment">// any function can return promise, next function receives value as arg</span>
+    () =&gt; <span class="hljs-built_in">Promise</span>.resolve([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>])
+    <span class="hljs-comment">// returning array of promises</span>
+    <span class="hljs-comment">// no need to wrap in promise resolved</span>
+    (ids: <span class="hljs-built_in">number</span>[]) =&gt; ids.map(db.find),
+    <span class="hljs-comment">// resolved array of users ready in next function</span>
+    (users: User[]), =&gt; users.map(countUserRating),
+)(); <span class="hljs-comment">// userRating[]</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>deltaFn: <a href="globals.html#deltafn" class="tsd-signature-type">DeltaFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>riverFns: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#riverfn" class="tsd-signature-type">RiverFn</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<p>Function with signature of the first function (or no args if no functions provided) returning Promise of a result of last function</p>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
@@ -633,7 +1594,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/promiseChain.ts#L6">promiseChain.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/promiseChain.ts#L6">promiseChain.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -677,7 +1638,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/promisify.ts#L3">promisify.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/promisify.ts#L3">promisify.ts:3</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -732,7 +1693,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/promisify.ts#L4">promisify.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/promisify.ts#L4">promisify.ts:4</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -799,7 +1760,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/promisify.ts#L5">promisify.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/promisify.ts#L5">promisify.ts:5</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -875,7 +1836,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/promisify.ts#L6">promisify.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/promisify.ts#L6">promisify.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -960,7 +1921,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/promisify.ts#L9">promisify.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/promisify.ts#L9">promisify.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1065,7 +2026,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/snakelize.ts#L17">snakelize.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/snakelize.ts#L17">snakelize.ts:17</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1090,7 +2051,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/snakelize.ts#L18">snakelize.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/snakelize.ts#L18">snakelize.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1114,7 +2075,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/snakelize.ts#L19">snakelize.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/snakelize.ts#L19">snakelize.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1137,7 +2098,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/tableColumns.ts#L9">tableColumns.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/tableColumns.ts#L9">tableColumns.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1178,7 +2139,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/tap.ts#L5">tap.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/tap.ts#L5">tap.ts:5</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1231,7 +2192,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/toJson.ts#L12">toJson.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/toJson.ts#L12">toJson.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1274,7 +2235,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/transacted.ts#L8">transacted.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/transacted.ts#L8">transacted.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1306,7 +2267,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 					<div class="tsd-signature tsd-kind-icon">stopwatch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/Microservice.ts#L11">Microservice.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/Microservice.ts#L11">Microservice.ts:11</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -1319,7 +2280,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/Microservice.ts#L13">Microservice.ts:13</a></li>
+										<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/Microservice.ts#L13">Microservice.ts:13</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Object</span></h4>
@@ -1336,7 +2297,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/Microservice.ts#L16">Microservice.ts:16</a></li>
+										<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/Microservice.ts#L16">Microservice.ts:16</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1356,7 +2317,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 					<div class="tsd-signature tsd-kind-icon">void<wbr>Logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/Microservice.ts#L22">Microservice.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/Microservice.ts#L22">Microservice.ts:22</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -1369,7 +2330,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/Microservice.ts#L24">Microservice.ts:24</a></li>
+										<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/Microservice.ts#L24">Microservice.ts:24</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span></h4>
@@ -1386,7 +2347,7 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/32885ab/src/lib/Microservice.ts#L23">Microservice.ts:23</a></li>
+										<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/acc0618/src/lib/Microservice.ts#L23">Microservice.ts:23</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span></h4>
@@ -1415,16 +2376,16 @@ snakelize([{snakelizeDis: {leaveThis: <span class="hljs-number">1</span>}}]) <sp
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="interfaces/request.html" class="tsd-kind-icon">Request</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
-						<a href="globals.html#aschain" class="tsd-kind-icon">As<wbr>Chain</a>
-					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#callback" class="tsd-kind-icon">Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
+						<a href="globals.html#deltafn" class="tsd-kind-icon">Delta<wbr>Fn</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#nullable" class="tsd-kind-icon">Nullable</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter tsd-is-not-exported">
 						<a href="globals.html#riverfn" class="tsd-kind-icon">River<wbr>Fn</a>
 					</li>
 					<li class=" tsd-kind-function">
