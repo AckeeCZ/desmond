@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`attributes Converts JSON, bool and omits nulls 1`] = `
+Object {
+  "active": true,
+  "boring": false,
+  "keepThis": null,
+  "nullThis": null,
+  "someIds": Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+}
+`;

@@ -1,4 +1,5 @@
 export { default as absoluteUrl } from './lib/absoluteUrl';
+export { default as attributes } from './lib/attributes';
 export { default as compareBcrypt } from './lib/compareBcrypt';
 export { default as generateRandomAlphanumeric } from './lib/generateRandomAlphanumeric';
 export { default as hash } from './lib/hash';
