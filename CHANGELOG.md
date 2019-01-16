@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - upgraded tslint-config
 - Make all tests use main exports
 - Use native types for knex and bookshelf
+- User overwrite for pipe types
 
 ### Fixed
 - #15
