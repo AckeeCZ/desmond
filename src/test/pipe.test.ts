@@ -66,6 +66,9 @@ describe('pipe', () => {
             always(1),
             always(1),
             always(1),
+            always(1),
+            always(1),
+            always(1),
             always(1)
         );
         await expect(longPipe()).resolves.toEqual(1);

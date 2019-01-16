@@ -3,6 +3,9 @@
   "description": "Desmond is a caretaker of boilerplate code for node back-end development, providing a set of maintained tools.",
   "version": "0.4.0",
   "author": "Jaroslav Šmolík <grissius@gmail.com>",
+  "contributors": [
+    "Jiří Šmolík <smolikjirka@gmail.com>"
+  ],
   "main": "./dist/main.js",
   "engines": {
     "node": "^8.12.0"
