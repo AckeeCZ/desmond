@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Updated npm deploy token
+- Updated prettier config
+- Pretty ignore changelog, because it breaks keep-a-changelog format
 
 ## [0.5.0] - 2019-01-17
 ### Added
