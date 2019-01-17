@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Logger | Desmond</title>
+	<title>SeedOptions | Desmond</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="logger.html">Logger</a>
+					<a href="seedoptions.html">SeedOptions</a>
 				</li>
 			</ul>
-			<h1>Interface Logger</h1>
+			<h1>Interface SeedOptions</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Logger</span>
+						<span class="target">SeedOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -79,8 +79,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="logger.html#error" class="tsd-kind-icon">error</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="logger.html#info" class="tsd-kind-icon">info</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="seedoptions.html#selectors" class="tsd-kind-icon">selectors</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="seedoptions.html#timestampedcollections" class="tsd-kind-icon">timestamped<wbr>Collections</a></li>
 							</ul>
 						</section>
 					</div>
@@ -89,66 +89,24 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="error" class="tsd-anchor"></a>
-					<h3>error</h3>
-					<div class="tsd-signature tsd-kind-icon">error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<a name="selectors" class="tsd-anchor"></a>
+					<h3>selectors</h3>
+					<div class="tsd-signature tsd-kind-icon">selectors<span class="tsd-signature-symbol">:</span> <a href="selectors.html" class="tsd-signature-type">Selectors</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/b7bcebf/src/lib/Microservice.ts#L8">Microservice.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/b7bcebf/src/lib/seedRun.ts#L12">seedRun.ts:12</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>msg: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="info" class="tsd-anchor"></a>
-					<h3>info</h3>
-					<div class="tsd-signature tsd-kind-icon">info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<a name="timestampedcollections" class="tsd-anchor"></a>
+					<h3>timestamped<wbr>Collections</h3>
+					<div class="tsd-signature tsd-kind-icon">timestamped<wbr>Collections<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/b7bcebf/src/lib/Microservice.ts#L7">Microservice.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/AckeeCZ/desmond/blob/b7bcebf/src/lib/seedRun.ts#L13">seedRun.ts:13</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>msg: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -168,27 +126,27 @@
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="datapool.html" class="tsd-kind-icon">Data<wbr>Pool</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="logger.html" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-not-exported">
+						<a href="request.html" class="tsd-kind-icon">Request</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="logger.html" class="tsd-kind-icon">Logger</a>
+						<a href="seedoptions.html" class="tsd-kind-icon">Seed<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="logger.html#error" class="tsd-kind-icon">error</a>
+								<a href="seedoptions.html#selectors" class="tsd-kind-icon">selectors</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="logger.html#info" class="tsd-kind-icon">info</a>
+								<a href="seedoptions.html#timestampedcollections" class="tsd-kind-icon">timestamped<wbr>Collections</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="request.html" class="tsd-kind-icon">Request</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="seedoptions.html" class="tsd-kind-icon">Seed<wbr>Options</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
 						<a href="selectors.html" class="tsd-kind-icon">Selectors</a>
 					</li>
