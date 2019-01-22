@@ -78,9 +78,9 @@ export default class Microservice {
      * @param defaultOptions Default options for request
      */
     constructor(
-        protected readonly baseUrl: string = '/',
-        protected readonly defaultOptions: object = {},
-        protected readonly logger: Logger = voidLogger
+        protected baseUrl: string = '/',
+        protected defaultOptions: object = {},
+        protected logger: Logger = voidLogger
     ) {}
 
     protected request(pathName: string, options: any = {}) {
@@ -153,5 +153,5 @@ export default class Microservice {
             throw new Error(`Unacceptable response statusCode: ${response.statusCode} not in ${JSON.stringify(codes)}`);
         }
         return response;
-    }
+    };
 }
