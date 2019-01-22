@@ -4,6 +4,11 @@
         "tslint-config-ackee"
     ],
     "jsRules": {},
-    "rules": {},
+    "rules": {
+        "ter-indent": [true, 4],
+        "ter-arrow-parens": false,
+        "prefer-array-literal": false,
+        "no-parameter-reassignment": false
+    },
     "rulesDirectory": []
 }

@@ -1,5 +1,5 @@
 import { tableColumns } from 'main';
-import createKnexMock from './mock/knex';
+import createKnexMock from './mock/createKnexMock';
 
 const knex = createKnexMock({}, (name: string) => ({
     columnInfo: () =>

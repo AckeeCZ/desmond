@@ -1,4 +1,4 @@
-import camelCase from 'lodash.camelcase';
+import lodashCamelcase from 'lodash.camelcase';
 import { flatOmit, mapKeys, mapValues, toPairs } from './internal/utils';
 import snakelize from './snakelize';
 
@@ -32,7 +32,7 @@ const upsert = (knex: any, selectors: Selectors, entity: string, data: any) => {
                 knex(snakelize(entity)).insert(snakelize(data))
         )
         .then(select)
-        .then((result: any) => mapKeys(result, key => camelCase(key)));
+        .then((result: any) => mapKeys(result, key => lodashCamelcase(key)));
 };
 
 const resolveRefs = (dataPools: DataPool, data: any) => {

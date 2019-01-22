@@ -1,4 +1,4 @@
-import snakeCase from 'lodash.snakecase';
+import lodashSnakecase from 'lodash.snakecase';
 import { mapKeys } from './internal/utils';
 import { isString } from './internal/validators';
 
@@ -21,7 +21,7 @@ function snakelize(input: any) {
     if (isString(input)) {
         return input
             .split('.')
-            .map(snakeCase)
+            .map(lodashSnakecase)
             .join('.');
     }
     return Array.isArray(input) ? input.map(o => mapKeys(o, snakelize)) : mapKeys(input, snakelize);

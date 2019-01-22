@@ -6,7 +6,7 @@ let lastOptions: object;
 const jsonRes: any = { name: 'Jack' };
 const entity = {
     toJSON: (options: object) => {
-        toJsonCounter++;
+        toJsonCounter += 1;
         lastOptions = options;
         return jsonRes;
     },

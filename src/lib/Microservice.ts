@@ -1,6 +1,6 @@
-import defaultsDeep from 'lodash.defaultsdeep';
+import lodashDefaultsdeep from 'lodash.defaultsdeep';
 import { Response } from 'request';
-import request from 'request-promise';
+import requestPromise from 'request-promise';
 import * as url from 'url';
 
 export interface Logger {
@@ -93,8 +93,8 @@ export default class Microservice {
         this.logger.info({ uri, pathName, correlationId, qs: options.qs, body: options.body }, `--> ${this.baseUrl}`);
         const tStart = stopwatch.start();
         return Promise.resolve(
-            request(
-                defaultsDeep({}, this.defaultOptions, options, {
+            requestPromise(
+                lodashDefaultsdeep({}, this.defaultOptions, options, {
                     uri,
                     resolveWithFullResponse: true,
                 })
@@ -147,7 +147,7 @@ export default class Microservice {
      */
     public static okCodes = (codes: number[]) => (response: Response): Response => {
         if (!response) {
-            throw new Error(`Unacceptable response: No Response`);
+            throw new Error('Unacceptable response: No Response');
         }
         if (!codes.find(x => x === response.statusCode)) {
             throw new Error(`Unacceptable response statusCode: ${response.statusCode} not in ${JSON.stringify(codes)}`);

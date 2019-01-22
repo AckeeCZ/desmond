@@ -1,4 +1,4 @@
-import isEmpty from 'lodash.isempty';
+import lodashIsempty from 'lodash.isempty';
 import { isObject } from './internal/validators';
 import parseBool from './parseBool';
 
@@ -32,7 +32,7 @@ const attributes = (input: any, params: {
     const nullOnEmptyCols = Array.isArray(params.nullOnEmpty) ? params.nullOnEmpty : Object.keys(input).filter(col => isObject(input[col]));
 
     nullOnEmptyCols.forEach(column => {
-        if (isEmpty(input[column])) {
+        if (lodashIsempty(input[column])) {
             input[column] = null;
         }
     });
