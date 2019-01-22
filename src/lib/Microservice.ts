@@ -89,12 +89,16 @@ export default class Microservice {
 
     protected async request(pathName: string, options: any = {}) {
         const uri = this.composeUrl(pathName);
+        return this.makeRequest(uri, options);
+    }
+
+    protected async makeRequest(uri: string, options: any = {}) {
         const correlationId = Math.random()
             .toString(36)
             .slice(7);
         // Caution: `this.baseUrl` could be with a path,
         // although the resolved `uri` could be without it - if `pathName` is equal to '/'
-        this.logger.info({ uri, pathName, correlationId, qs: options.qs, body: options.body }, `--> ${this.baseUrl}`);
+        this.logger.info({ uri, correlationId, qs: options.qs, body: options.body }, `--> ${this.baseUrl}`);
         const tStart = stopwatch.start();
         try {
             const res = await request(
