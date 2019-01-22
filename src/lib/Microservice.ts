@@ -158,5 +158,5 @@ export default class Microservice {
             throw new Error(`Unacceptable response statusCode: ${response.statusCode} not in ${JSON.stringify(codes)}`);
         }
         return response;
-    };
+    }
 }
