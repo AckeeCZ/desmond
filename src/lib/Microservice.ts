@@ -101,7 +101,7 @@ export default class Microservice {
         this.logger.info({ uri, correlationId, qs: options.qs, body: options.body }, `--> ${this.baseUrl}`);
         const tStart = stopwatch.start();
         try {
-            const res = await request(
+            const res: Response = await request(
                 defaultsDeep({}, this.defaultOptions, options, {
                     uri,
                     resolveWithFullResponse: true,
