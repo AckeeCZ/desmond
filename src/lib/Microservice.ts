@@ -119,7 +119,7 @@ export default class Microservice {
                     `-->X ${this.baseUrl} (${Math.round(millis)}ms)`
                 );
                 throw error;
-            }) as Promise<Response>;
+            });
     }
 
     public get(pathName: string = '/', qs: object = {}, options: object = {}) {
