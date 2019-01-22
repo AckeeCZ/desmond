@@ -83,8 +83,12 @@ export default class Microservice {
         protected logger: Logger = voidLogger
     ) {}
 
+    protected composeUrl(pathName: string) {
+        return url.resolve(this.baseUrl, pathName);
+    }
+
     protected request(pathName: string, options: any = {}) {
-        const uri = url.resolve(this.baseUrl, pathName);
+        const uri = this.composeUrl(pathName);
         const correlationId = Math.random()
             .toString(36)
             .slice(7);
