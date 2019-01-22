@@ -83,12 +83,12 @@ export default class Microservice {
         protected logger: Logger = voidLogger
     ) {}
 
-    protected composeUrl(pathName: string) {
+    protected async composeUrl(pathName: string) {
         return url.resolve(this.baseUrl, pathName);
     }
 
     protected async request(pathName: string, options: any = {}) {
-        const uri = this.composeUrl(pathName);
+        const uri = await this.composeUrl(pathName);
         return this.makeRequest(uri, options);
     }
 
