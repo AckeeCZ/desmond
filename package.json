@@ -1,7 +1,7 @@
 {
     "name": "desmond",
     "description": "Desmond is a caretaker of boilerplate code for node back-end development, providing a set of maintained tools.",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "author": "Jaroslav Šmolík <grissius@gmail.com>",
     "contributors": [
         "Jiří Šmolík <smolikjirka@gmail.com>"
