@@ -1,7 +1,7 @@
 import { promiseChain } from 'main';
 
 describe('promiseChain', () => {
-    test('Promises', async () => {
+    test('Promises', async() => {
         const results: number[] = [];
 
         const thenAdd = (x: number, wait: number) => {
