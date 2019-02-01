@@ -4,7 +4,7 @@ exports[`attributes Converts JSON, bool and omits nulls 1`] = `
 Object {
   "active": true,
   "boring": false,
-  "keepThis": null,
+  "keepThis": Array [],
   "nullThis": null,
   "someIds": Array [
     1,
