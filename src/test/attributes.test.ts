@@ -6,6 +6,7 @@ const data = {
     boring: 0,
     nullThis: '',
     keepThis: [],
+    keepThisDate: new Date(0),
 };
 
 describe('attributes', () => {
