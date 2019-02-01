@@ -56,6 +56,22 @@ describe('pipe', () => {
 
         expect(res).toEqual(true);
     });
+    test('Typings (fuzzy) correct', async() => {
+        interface FizzBuzz {
+            fizz: number;
+            buzz: number;
+        }
+        const fbPipe: (fb: FizzBuzz) => Promise<FizzBuzz> = pipe(
+            fb => fb,
+            (fizz: Pick<FizzBuzz, 'fizz'>) => ({ fizz: fizz.fizz, buzz: 1 }),
+            fb => fb,
+            (somewhatFb: Partial<FizzBuzz>) => ({ fizz: somewhatFb.fizz || 1, buzz: somewhatFb.buzz || 1 }),
+            fb => fb,
+        );
+        const res: FizzBuzz = await fbPipe({ fizz: 1, buzz: 1 });
+
+        expect(res).toEqual(true);
+    });
     test('Typings take out-of-bounds list of functions', async() => {
         const longPipe = pipe(
             always(1),
