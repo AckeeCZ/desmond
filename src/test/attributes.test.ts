@@ -14,10 +14,12 @@ describe('attributes', () => {
         expect(attributes(data)).toEqual(data);
     });
     test('Converts JSON, bool and omits nulls', () => {
-        expect(attributes(data, {
-            jsonColumns: ['someIds'],
-            toBoolean: ['active', 'boring'],
-            nullOnEmpty: ['nullThis'],
-        })).toMatchSnapshot();
+        expect(
+            attributes(data, {
+                jsonColumns: ['someIds'],
+                toBoolean: ['active', 'boring'],
+                nullOnEmpty: ['nullThis'],
+            })
+        ).toMatchSnapshot();
     });
 });

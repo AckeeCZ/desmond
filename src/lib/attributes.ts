@@ -9,11 +9,14 @@ import parseBool from './parseBool';
  * 2. Put null instead of empty strings or objects
  * 3. Parse to booleans (e.g. SMALL_INT)
  */
-const attributes = (input: any, params: {
-    jsonColumns?: string[];
-    toBoolean?: string[];
-    nullOnEmpty?: '*' | string[];
-} = {}) => {
+const attributes = (
+    input: any,
+    params: {
+        jsonColumns?: string[];
+        toBoolean?: string[];
+        nullOnEmpty?: '*' | string[];
+    } = {}
+) => {
     (params.jsonColumns || []).map(column => {
         if (input[column]) {
             input[column] = Array.isArray(input[column]) ? input[column] : JSON.parse(input[column]);
@@ -29,7 +32,9 @@ const attributes = (input: any, params: {
         }
     });
 
-    const nullOnEmptyCols = Array.isArray(params.nullOnEmpty) ? params.nullOnEmpty : Object.keys(input).filter(col => isObject(input[col]));
+    const nullOnEmptyCols = Array.isArray(params.nullOnEmpty)
+        ? params.nullOnEmpty
+        : Object.keys(input).filter(col => isObject(input[col]));
 
     nullOnEmptyCols.forEach(column => {
         if (lodashIsempty(input[column])) {
