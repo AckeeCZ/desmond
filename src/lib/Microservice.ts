@@ -103,7 +103,7 @@ export default class Microservice {
         // Caution: `this.baseUrl` could be with a path,
         // although the resolved `uri` could be without it - if `pathName` is equal to '/'
         this.logger.info(
-            { uri, correlationId, qs: options.qs, body: options.body, options: allOptions },
+            { uri, correlationId, qs: options.qs, body: options.body, headers: options.headers },
             `--> ${this.baseUrl}`
         );
         const tStart = stopwatch.start();
@@ -115,14 +115,14 @@ export default class Microservice {
             //  Dont log large bodies at all? (and size only instead of contents)
             //  Headers?
             this.logger.info(
-                { correlationId, statusCode: res.statusCode, body: res.body, options: allOptions },
+                { correlationId, statusCode: res.statusCode, body: res.body, headers: options.headers },
                 `<-- ${this.baseUrl} ${res.statusCode} (${Math.round(millis)}ms)`
             );
             return res;
         } catch (error) {
             const millis = stopwatch.stop(tStart);
             this.logger.error(
-                { correlationId, error, errorMessage: error.message, options: allOptions },
+                { correlationId, error, errorMessage: error.message, headers: options.headers },
                 `-->X ${this.baseUrl} (${Math.round(millis)}ms)`
             );
             throw error;

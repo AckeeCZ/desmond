@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Options logging for Microservice
+- Headers logging for Microservice
 
 ### Fixed
 - Lint-staged find related tests option
