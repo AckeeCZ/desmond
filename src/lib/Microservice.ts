@@ -96,31 +96,33 @@ export default class Microservice {
         const correlationId = Math.random()
             .toString(36)
             .slice(7);
+        const allOptions = lodashDefaultsdeep({}, this.defaultOptions, options, {
+            uri,
+            resolveWithFullResponse: true,
+        });
         // Caution: `this.baseUrl` could be with a path,
         // although the resolved `uri` could be without it - if `pathName` is equal to '/'
-        this.logger.info({ uri, correlationId, qs: options.qs, body: options.body }, `--> ${this.baseUrl}`);
+        this.logger.info(
+            { uri, correlationId, qs: options.qs, body: options.body, headers: options.headers },
+            `--> ${this.baseUrl}`
+        );
         const tStart = stopwatch.start();
         try {
-            const res: Response = await requestPromise(
-                lodashDefaultsdeep({}, this.defaultOptions, options, {
-                    uri,
-                    resolveWithFullResponse: true,
-                })
-            );
+            const res: Response = await requestPromise(allOptions);
             const millis = stopwatch.stop(tStart);
             // TODO What to log
             //  Optional body logger per call?
             //  Dont log large bodies at all? (and size only instead of contents)
             //  Headers?
             this.logger.info(
-                { correlationId, statusCode: res.statusCode, body: res.body },
+                { correlationId, statusCode: res.statusCode, body: res.body, headers: options.headers },
                 `<-- ${this.baseUrl} ${res.statusCode} (${Math.round(millis)}ms)`
             );
             return res;
         } catch (error) {
             const millis = stopwatch.stop(tStart);
             this.logger.error(
-                { correlationId, error, message: error.message },
+                { correlationId, error, errorMessage: error.message, headers: options.headers },
                 `-->X ${this.baseUrl} (${Math.round(millis)}ms)`
             );
             throw error;

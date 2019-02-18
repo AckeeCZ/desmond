@@ -30,7 +30,7 @@ describe('Microservice', () => {
                 .get(path)
                 .reply(status, body);
         });
-        test('Matches status code and body', async() => {
+        test('Matches status code and body', async () => {
             const res = await service.get(path);
             expect(res.body).toBe(body);
             expect(res.statusCode).toBe(status);
@@ -46,7 +46,7 @@ describe('Microservice', () => {
                 .get(path)
                 .reply(status, body);
         });
-        test('Matches status code and body', async() => {
+        test('Matches status code and body', async () => {
             await expect(service.get(path)).rejects.toBeInstanceOf(StatusCodeError);
         });
     });
@@ -64,7 +64,7 @@ describe('Microservice', () => {
             public brew = () => this.post('/coffee').then(CoffeeMachine.coffeeOkCodes);
         }
         const coffeeMachine = new CoffeeMachine();
-        test('Matches status code and body', async() => {
+        test('Matches status code and body', async () => {
             nock(coffeeUrl)
                 .post(coffeePath)
                 .reply(status, body);
@@ -72,7 +72,7 @@ describe('Microservice', () => {
             expect(response.body).toBe(body);
             expect(response.statusCode).toBe(status);
         });
-        test('Rejects codes that are not OK', async() => {
+        test('Rejects codes that are not OK', async () => {
             nock(coffeeUrl)
                 .post(coffeePath)
                 .reply(200, body);
@@ -98,7 +98,7 @@ describe('Microservice', () => {
             r: 'read item',
             u: 'updated item',
         };
-        test('Matches status code and body', async() => {
+        test('Matches status code and body', async () => {
             nock(URL)
                 .post('/')
                 .reply(200, body.c);

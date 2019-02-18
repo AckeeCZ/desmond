@@ -11,7 +11,7 @@ const knex = createKnexMock({}, (name: string) => ({
 }));
 
 describe('tableColumns', () => {
-    test('Camelcases all columns', async() => {
+    test('Camelcases all columns', async () => {
         const got = tableColumns(knex, 'some_name').then((cols: any) => cols.sort());
         const expected = ['someName', 'fooBar', 'barBaz'].sort();
         await expect(got).resolves.toEqual(expected);
