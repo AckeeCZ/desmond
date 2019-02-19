@@ -92,11 +92,11 @@ export default class Microservice {
         return this.makeRequest(uri, options);
     }
 
-    protected async makeRequest(uri: string, options: any = {}) {
+    protected async makeRequest(uri: string, reqOptions: any = {}) {
         const correlationId = Math.random()
             .toString(36)
             .slice(7);
-        const allOptions = lodashDefaultsdeep({}, this.defaultOptions, options, {
+        const options = lodashDefaultsdeep({}, this.defaultOptions, reqOptions, {
             uri,
             resolveWithFullResponse: true,
         });
@@ -108,7 +108,7 @@ export default class Microservice {
         );
         const tStart = stopwatch.start();
         try {
-            const res: Response = await requestPromise(allOptions);
+            const res: Response = await requestPromise(options);
             const millis = stopwatch.stop(tStart);
             // TODO What to log
             //  Optional body logger per call?
