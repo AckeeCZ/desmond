@@ -150,7 +150,7 @@ export default class Microservice {
     }
 
     public otherMethod(method: string, pathName: string = '/', payload: object = {}, options: object = {}) {
-        return this.request(pathName, { ...options, body: payload, method });
+        return this.request(pathName, { ...options, method, body: payload });
     }
 
     /**
