@@ -137,12 +137,20 @@ export default class Microservice {
         return this.request(pathName, { ...options, body: payload, method: 'PUT' });
     }
 
+    public patch(pathName: string = '/', payload: object = {}, options: object = {}) {
+        return this.request(pathName, { ...options, body: payload, method: 'PATCH' });
+    }
+
     public post(pathName: string = '/', payload: any = {}, options: object = {}) {
         return this.request(pathName, { ...options, body: payload, method: 'POST' });
     }
 
     public delete(pathName: string = '/', options: object = {}) {
         return this.request(pathName, { ...options, method: 'DELETE' });
+    }
+
+    public otherMethod(method: string, pathName: string = '/', payload: object = {}, options: object = {}) {
+        return this.request(pathName, { ...options, method, body: payload });
     }
 
     /**
