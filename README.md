@@ -2,87 +2,35 @@
 
 ![Desmond](https://i.imgur.com/SPO2gD7.png)
 [![Build Status](https://img.shields.io/travis/com/AckeeCZ/desmond/master.svg?style=flat-square)](https://travis-ci.com/AckeeCZ/desmond)
-[![Coverage Status](https://img.shields.io/coveralls/github/AckeeCZ/desmond.svg?style=flat-square)](https://coveralls.io/github/AckeeCZ/desmond?branch=master)
-[![Dependency Status](https://img.shields.io/david/AckeeCZ/desmond.svg?style=flat-square)](https://david-dm.org/AckeeCZ/desmond)
 [![Npm](https://img.shields.io/npm/v/desmond.svg?style=flat-square)](https://www.npmjs.com/package/desmond)
-[![Types](https://img.shields.io/npm/types/desmond.svg?style=flat-square)](https://www.npmjs.com/package/desmond)
-[![Docs](https://img.shields.io/badge/docs-typedoc-lightgrey.svg?style=flat-square)](https://ackeecz.github.io/desmond)
 [![License](https://img.shields.io/github/license/AckeeCZ/desmond.svg?style=flat-square)](https://github.com/AckeeCZ/desmond/blob/master/LICENSE)
 
 Desmond is a caretaker of boilerplate code for node back-end development, providing a set of maintained tools.
 </div>
 
+<div align="center">
 
-## Install
+## DEPRECATION NOTICE
 
-```shell
-npm i --save desmond
-```
+![](https://media.giphy.com/media/LyyD3b2vTQUBW/giphy.gif)
+</div>
 
-## Usage
 
-```ts
-import { parseBool } from 'desmond'; // const { parseBool } = require('desmond');
+Until further notice this package is depreciated and no longer maintained. Here is a list of viable alternatives:
 
-parseBool('false');
-```
-
-Project features Typescript definitions! :yum:
-
-To see what functions and tools are available, see the next section.
-
-## Contents
-
-### Express
-
--   [`absoluteUrl`](https://ackeecz.github.io/desmond/globals.html#absoluteurl)
-
-### Hashing
-
--   [`compareBcrypt`](https://ackeecz.github.io/desmond/globals.html#comparebcrypt)
--   [`hashBcrypt`](https://ackeecz.github.io/desmond/globals.html#hashbcrypt)
--   [`hash`](https://ackeecz.github.io/desmond/globals.html#hash)
-
-### Database
-
--   [`attributes`](https://ackeecz.github.io/desmond/globals.html#attributes)
--   [`snakelize`](https://ackeecz.github.io/desmond/globals.html#snakelize)
--   [`toJson`](https://ackeecz.github.io/desmond/globals.html#tojson)
--   [`tableColumns`](https://ackeecz.github.io/desmond/globals.html#tablecolumns)
--   [`transacted`](https://ackeecz.github.io/desmond/globals.html#transacted)
-
-### Promises
-
--   [`pipe`](https://ackeecz.github.io/desmond/globals.html#pipe)
--   [`promiseChain`](https://ackeecz.github.io/desmond/globals.html#promisechain)
--   [`promisify`](https://ackeecz.github.io/desmond/globals.html#promisify)
--   [`tap`](https://ackeecz.github.io/desmond/globals.html#tap)
-
-### Other
-
--   [`Microservice`](https://ackeecz.github.io/desmond/classes/microservice.html)
--   [`parseBool`](https://ackeecz.github.io/desmond/globals.html#parsebool)
--   [`generateRandomAlphanumeric`](https://ackeecz.github.io/desmond/globals.html#generaterandomalphanumeric)
-
-## Development
-
-### Building
-
--   `npm run build`
-
-### Testing
-
--   `npm run test`
--   `npm run test:coverage`
-
-### Lint
-
--   `npm run lint`
-
-### Docs
-
--   `npm run docs`
--   Documentation is generated from the Typescript / JSDoc using Typedoc
+- `absoluteUrl` - Common, you have never even used that anyway. But if you're being serious, use this [oneliner](https://stackoverflow.com/a/10185427/4425335)
+- `compareBcrypt`, `hashBcrypt` - Use [`bcrypt`](https://www.npmjs.com/package/bcrypt) directly, if you need it, but most of the time you will probably custom or third party service and not need helper on each service
+- `hash` - Use Node API directly
+- `attributes` - Use new [databless](https://github.com/AckeeCZ/databless) `deserialize` functions instead
+- `snakelize` - Use [knex-stringcase](https://www.npmjs.com/package/knex-stringcase) instead, don't modify fields manually
+- `toJson`, `tableColumns` - Use [databless](https://github.com/AckeeCZ/databless)' repository API and don't tamper with models directly
+- `transacted` - Use native knex API, generally transactions are not widely used
+- `promisify` - Use node utils implementation
+- `tap` - Use lodash/ramda/custom implementation
+- `Microservice` - Use [got](https://www.npmjs.com/package/got)'s `extend`
+- `generateRandomAlphanumeric` - [`uuid`](https://www.npmjs.com/package/uuid) is better option for most cases
+- `parseBool` - This is actually not half bad, if you need it, see the [implementation](https://github.com/AckeeCZ/desmond/blob/e3e9289a0b22b55ac1ddb90a841f1088b926b48d/src/lib/parseBool.ts)
+- `promiseChain` - Ditto, see [implementation](https://github.com/AckeeCZ/desmond/blob/c165042fdd527a2e15e2d26275df67f3e55e58df/src/lib/promiseChain.ts)
 
 ## License
 
