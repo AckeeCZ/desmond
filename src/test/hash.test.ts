@@ -1,4 +1,4 @@
-import { HexBase64Latin1Encoding } from 'crypto';
+import { BinaryToTextEncoding } from 'crypto';
 import { hash } from 'main';
 
 describe('createHash', () => {
@@ -15,10 +15,10 @@ describe('createHash', () => {
             expect(() => hash(data, algo)).toThrow();
         });
         test('Returns buffer on null encoding', () => {
-            expect(hash(data, 'sha1', (null as any) as HexBase64Latin1Encoding)).toBeInstanceOf(Buffer);
+            expect(hash(data, 'sha1', (null as any) as BinaryToTextEncoding)).toBeInstanceOf(Buffer);
         });
         test('Returns buffer on invalid encoding', () => {
-            const encoding = ('NorThisDigestEncoding' as any) as HexBase64Latin1Encoding;
+            const encoding = ('NorThisDigestEncoding' as any) as BinaryToTextEncoding;
             expect(hash(data, 'sha1', encoding)).toBeInstanceOf(Buffer);
         });
     });
@@ -39,9 +39,6 @@ describe('createHash', () => {
         });
         test('Digest base64', () => {
             expect(hash(data, algo, 'base64')).toBe('pok7bJS5pvp4RnWp23d9bQ==');
-        });
-        test('Digest latin1', () => {
-            expect(hash(data, algo, 'latin1')).toBe('¦;l¹¦úxFu©Ûw}m');
         });
     });
 });
