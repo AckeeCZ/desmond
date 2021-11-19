@@ -1,4 +1,3 @@
-import { BinaryToTextEncoding } from 'crypto';
 import { hash } from 'main';
 
 describe('createHash', () => {
@@ -15,10 +14,10 @@ describe('createHash', () => {
             expect(() => hash(data, algo)).toThrow();
         });
         test('Returns buffer on null encoding', () => {
-            expect(hash(data, 'sha1', (null as any) as BinaryToTextEncoding)).toBeInstanceOf(Buffer);
+            expect(hash(data, 'sha1', null as any)).toBeInstanceOf(Buffer);
         });
         test('Returns buffer on invalid encoding', () => {
-            const encoding = ('NorThisDigestEncoding' as any) as BinaryToTextEncoding;
+            const encoding = 'NorThisDigestEncoding' as any;
             expect(hash(data, 'sha1', encoding)).toBeInstanceOf(Buffer);
         });
     });
